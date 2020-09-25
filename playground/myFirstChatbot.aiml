@@ -1,0 +1,44 @@
+<aiml version="1.0.1" encoding="UTF-8">
+<!-- basic_chat.aiml -->
+
+    <category>
+        <pattern>HELLO</pattern>
+        <template>
+            Well, hello!
+        </template>
+    </category>
+    
+    <category>
+        <pattern>WHAT ARE YOU</pattern>
+        <template>
+            I'm a bot, silly!
+        </template>
+    </category>
+    
+    <category>
+        <pattern> IS THIS ALL THERE IS</pattern>
+        <template> I AM AFRAID SO </template>
+    </category>
+    
+    <category>
+        <pattern> do you have any suggestions for improving this </pattern>
+        <template> 
+            <random>
+            <li> use ipywidgets to make the user interface fancier</li>
+            <li> finding a way of making the system show a tece of what it has matched and whyt for an input </li>
+            
+            </random>
+        </template>
+    </category>
+    
+    <category>
+        <pattern> WHAT IS LEFT </pattern>
+        <template> 
+            <srai> IS THIS ALL THERE IS </srai> 
+        </template>
+    
+    </category>
+            
+    
+</aiml>
+

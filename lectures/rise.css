@@ -1,0 +1,71 @@
+.rise-enabled {
+    background-color: #ffffff !important;
+    border-top: 30px #919191 solid;
+    border-bottom: 30px #919191 solid;
+}
+
+
+/* ---------- markdown cells
+ */
+body.rise-enabled div.inner_cell>div.text_cell_render.rendered_html {
+    font-size: 80%;
+}
+
+.question {
+    color: #008;   
+}
+
+.your_turn {
+    color: #e08414;
+    font-size: 150%;
+    font-weight: bold;
+}
+
+.rendered_html h1 {
+    color: #129628;
+    font-size 100%
+}
+.rendered_html h2 {
+    color: #129628;
+    font-size 80%
+}
+
+.rendered_html p {
+    font-size:smaller
+}
+
+.rendered_html ul {
+ font-size: smaller;
+ padding: 0px; 
+ padding-left: 0px;
+ margin: 0px;
+ margin-left: 0px;
+}
+
+.rendered_html ol {
+ font-size:smaller;
+ padding : 0; 
+ margin: 0;
+}
+
+.rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
+    font-size: 100%;
+}
+
+.rendered_html alert{
+    margin-Top:5px;
+    font-size:smaller;
+}
+
+.blueBox {
+  background-color: lightblue;
+  color: black;
+  border: 2px solid black;
+  margin: 20px;
+  padding: 20px;
+}
+
+
+.container.slides .celltoolbar, .container.slides .hide-in-slideshow {
+    display: None ! important;
+}
