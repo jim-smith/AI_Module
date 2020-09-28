@@ -7,3 +7,6 @@ matplotlib
 sklearn
 random
 Ipython.display
+sys
+ipywidgets
+
