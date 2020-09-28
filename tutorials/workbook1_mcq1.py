@@ -46,5 +46,5 @@ Q4 = create_multipleChoice_widget('Does it make a difference if you you put a qu
 Q5 = create_multipleChoice_widget('Does it make a difference if you have a comma at the end of your input?',['yes','no'],'no')
 Q6 = create_multipleChoice_widget('Does it make a difference if you put a full stop at the end of your input?',['yes','no'],'no')
 Q7 = create_multipleChoice_widget('Does it make a difference if you you put a question mark at the end of your input?',['yes','no'],'no')
-Q8 = create_multipleChoice_widget('What happens if you enclose some of your input in quotation marks?',['it makes no difference', 'it passes the entire contents to the chatbot','it still splits the input  where the punctuation was'],'it still splits the input  where the punctuation was')
-Q9 =  create_multipleChoice_widget('What happens to contractions such as what\'s your name?',['the input is split  where the apostrophe was','the apostrophe is removed', 'they are expanded into two words'],'they are expanded into two words')
+Q8 = create_multipleChoice_widget('What happens if you enclose some of your input in quotation marks?',['it makes no difference', 'it passes the entire contents to the chatbot','it still splits the input'],'it still splits the input')
+Q9 =  create_multipleChoice_widget('What happens to contractions such as what\'s your name?',['the input is split  at the apostrophe','the apostrophe is removed', 'they are expanded into two words'],'they are expanded into two words')
