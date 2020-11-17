@@ -10,3 +10,4 @@ created using the workflow
    - print dialogue - choose ladnscape mode and allow background graphics then print to file
    
 
+when in a talk pressing 't' starts. the speaker notes
