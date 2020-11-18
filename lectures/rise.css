@@ -73,6 +73,22 @@ body.rise-enabled div.inner_cell>div.text_cell_render.rendered_html {
 }
 
 
+
+
+.container {
+  width: 100%;
+}
+
+.left,
+.right {
+  float: left;
+  width: 50%;
+     border: 1px solid red;
+    box-sizing: border-box;
+  
+}
+
+
 .container.slides .celltoolbar, .container.slides .hide-in-slideshow {
     display: None ! important;
 }
