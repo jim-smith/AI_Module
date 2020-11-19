@@ -1,0 +1,148 @@
+Q00: What is long-term knowledge?
+A00: Long-term knowledge is  valid every time a programme is run.
+
+Q01: What is short-term knowledge?
+A01: Short-term knowlege is only valid for a particular instance or run of a programme.
+
+Q02: What is generic knowledge?
+A02: Generic knowledge is  relevant to more than one application or domain.
+
+Q03: What is domain-specific knowledge?
+A03: Domain-specific knowledge is only applicable to one specific application or domain.
+
+Q05: Give me an example of long-term generic knowledge.
+A05: The equations of motion  used to calculate the flight-path of a bird in the game Angry Birds.
+
+Q06: Give me an example of long-term domain-specific knowledge.
+A06: The weight of the different types of birds in the game Angry Birds.
+
+Q07: Give me an example of short-term generic knowledge.
+A07: The date on which a specific episode of Angry Birds is played is generic because it could also be used by another programme.
+
+Q08: Give me an example of short-term domain specific knowledge.
+A08: The number of birds that a user has fired in a particular episode of Angry Birds.
+
+Q09: What is a relationship?
+A09: A relationship is a function that links an object with a subject (usually a property).
+
+Q10: Give me an example of a relationship.
+A10: The relationship hasEmail links people with their email addresses.
+
+Q11: What is a fact?
+A11: A fact is a statement which asserts that a relationship holds for an object-subject pair.
+
+Q12: Give me an example of a fact.
+A12: Jim Smith from UWE hasUWEPhoneNumber 0117 3287417.
+
+
+Q13: What is a rule?
+A13: A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.
+
+Q14: Give me an example of a rule.
+A14: if isUWEStaff(X) then hasUWEPhone (X)
+
+Q15: What is meta-knowledge?
+A15: Meta-knowledge is knowledge about knowledge
+
+Q16 What is an ontology?
+A16: an ontology is a collection of meta-knowledge relevant to a specific domain.
+
+Q17: What is the domain of a relationship?
+A17: The domain of a relationship is the set of things that are valid subjects of that relationship.
+
+Q18: Give me an example of the domain of a relationship.
+A18: The domain of hasUWEPhoneNumber() is members of UWE staff.
+
+Q19: What is the range of a relationship?
+A19: The range is the set of things that are valid objects of that relationship.
+
+Q20: Give me an example of the range of a relationship.
+A20: The range of hasUWEPhoneNumber is the set of 4 digit numbers prefixed by 0117328
+
+Q21: What is the cardinality of a relationship?
+A21: The cardinality of a relationship tells us how many values in the range each thing in the domain maps onto, and vice-versa.
+
+Q22: Give me an example of the cardinality of a relationship.
+A22: The relationship hasUWEPhoneNumber is one to one.
+
+Q23: Why is knowing that useful?
+A23: Because knowing the cardinality is one-to-one lets us infer that things are identical -for example that the Jim Smith with the phone number 01173287417 is the same Jim Smith that has email address james.smith@uwe.ac.uk
+
+Q24: What is a transitive relationship?
+A24: A transitive relationship R is one where if (a R b), and (b R c), we can infer that (a R c).
+
+Q25: Give me an example of a transitive relationship.
+Q25: If  Joe isOlder than Donald and Donald isOlderThan Kamala then Joe isOlderThan Kamala.
+
+Q26: Why is knowing that useful?
+A26: Because knowing a relationship is transitive lets us rapidly generate new facts
+
+Q27: Please myBot, what is a rule?
+A27:  A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.
+
+
+Q28: Describe long-term knowledge?
+A28: Long-term knowledge is  valid every time a programme is run.
+
+Q29: Describe domain-specific knowledge?
+A29: Domain-specific knowledge is only applicable to one specific application or domain.
+
+
+Q30: Tell me about long-term knowledge.
+A30: Long-term knowledge is  valid every time a programme is run.
+
+Q31: Tell me about domain-specific knowledge.
+A31: Domain-specific knowledge is only applicable to one specific application or domain.
+
+
+Q32: Describe a relationship
+A32: A relationship is a function that links an object with a subject (usually a property).
+
+Q34: Mybot, please describe a transitive relationship?
+A34: A transitive relationship R is one where if aRb, and bRc, we can infer that aRc.
+
+
+Q35: Illustrate the concept of long-term generic knowledge.
+A35: The equations of motion  used to calculate the flight-path of a bird in the game Angry Birds.
+
+Q36: Illustrate the concept of long-term domain-specific knowledge please.
+A36: The weight of the different types of birds in the game Angry Birds.
+
+Q37: Provide an example of short-term generic knowledge.
+A37: The date on which a specific episode of Angry Birds is played is generic because it could also be used by another programme.
+
+Q38: Tell me one example of of short-term domain specific knowledge.
+A38: The number of birds that a user has fired in a particular episode of Angry Birds.
+
+Q39: Describe how AIML allows variables in its long term knowledge?
+A39: AIML has wildcards and srai for that purpose.
+
+Q40: Tell me about how AIML supports variables for short term knowledge?
+A40: Predicate variables can be created and have values accessed using set and get tag pairs.
+
+Q41: How does AIML provide context during a conversation.
+A41: AIML supports context through the use of the that tag to refer to previous bot answers, and via setting variables such as topic.
+
+Q42: Give an example of why first order logic is not decideable
+A42: Because AIML allows variables in rules, it is possible to write a syntactically correct knowledge base that is endlessly recursive because it contains srai loops.
+
+Q43: What is an RDF tuple?
+A43: An RDF tuple is a set of object predicate subject where each of the three parts is unambuously defined.
+
+Q44: Why is knowing that useful?
+A44: Because if you share definitions then you allow shared reasoning. This is the point of the semantic web.
+
+Q45: Give me an example of the semantic web.
+A45: If organisations tag their websites with metadata using standard definitions  then search engines can extract useful things like locations and opening hours. 
+
+Q46: Please illustrate the concept of a fact.
+A46: Jim Smith from UWE hasUWEPhoneNumber 0117 3287417.
+
+Q47: Why is knowing that useful?
+A47: I have no answer for that.
+
+Q48: Jim Smith from UWE hasUWEPhoneNumber 0117 3287417.
+A48: I have no answer for that.
+
+Q49: Why is knowing that useful?
+A49: Because it is always good to discover gaps in our knowledge.
