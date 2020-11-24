@@ -1,148 +1,134 @@
 Q00: What is long-term knowledge?
-A00: Long-term knowledge is  valid every time a programme is run.
+A00: Long-term knowledge is valid every time a programme is run.
 
 Q01: What is short-term knowledge?
-A01: Short-term knowlege is only valid for a particular instance or run of a programme.
+A01: Short-term knowledge is only valid for a particular instance or run of a programme.
 
 Q02: What is generic knowledge?
-A02: Generic knowledge is  relevant to more than one application or domain.
+A02: Generic knowledge is relevant to more than one application or domain.
 
 Q03: What is domain-specific knowledge?
 A03: Domain-specific knowledge is only applicable to one specific application or domain.
 
-Q05: Give me an example of long-term generic knowledge.
-A05: The equations of motion  used to calculate the flight-path of a bird in the game Angry Birds.
+Q04: What is a fact?
+A04: A fact is a statement which asserts that a relationship holds for an object-subject pair.
 
-Q06: Give me an example of long-term domain-specific knowledge.
-A06: The weight of the different types of birds in the game Angry Birds.
+Q05: What is a rule?
+A05: A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.
 
-Q07: Give me an example of short-term generic knowledge.
-A07: The date on which a specific episode of Angry Birds is played is generic because it could also be used by another programme.
+Q06: Give me an example of long-term generic knowledge.
+A06: The equations of motion used to calculate the flight-path of a bird in the game Angry Birds.
 
-Q08: Give me an example of short-term domain specific knowledge.
-A08: The number of birds that a user has fired in a particular episode of Angry Birds.
+Q07: Give me an example of long-term domain-specific knowledge.
+A07: The weight of the different types of birds in the game Angry Birds.
 
-Q09: What is a relationship?
-A09: A relationship is a function that links an object with a subject (usually a property).
+Q08: Give me an example of short-term generic knowledge.
+A08: The date on which a specific episode of Angry Birds is played is generic because it could also be used by another programme.
 
-Q10: Give me an example of a relationship.
-A10: The relationship hasEmail links people with their email addresses.
+Q09: Give me an example of short-term domain-specific knowledge.
+A09: The number of birds that a user has fired in a particular episode of Angry Birds.
 
-Q11: What is a fact?
-A11: A fact is a statement which asserts that a relationship holds for an object-subject pair.
+Q10: Give me an example of a rule.
+A10: If isUWEStaff(X) then hasUWEPhone (X).
 
-Q12: Give me an example of a fact.
-A12: Jim Smith from UWE hasUWEPhoneNumber 0117 3287417.
+Q11: Give me an example of a fact.
+A11: Jim Smith from UWE hasUWEPhoneNumber 0117 3287417.
 
+Q12: Describe long-term knowledge?
+A12: Long-term knowledge is valid every time a programme is run.
 
-Q13: What is a rule?
-A13: A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.
+Q13: Describe short-term knowledge.
+A13: Short-term knowledge is only valid for a particular instance or run of a programme.
 
-Q14: Give me an example of a rule.
-A14: if isUWEStaff(X) then hasUWEPhone (X)
+Q14: Describe generic knowledge.
+A14: Generic knowledge is relevant to more than one application or domain.
 
-Q15: What is meta-knowledge?
-A15: Meta-knowledge is knowledge about knowledge
+Q15: Describe domain-specific knowledge.
+A15: Domain-specific knowledge is only applicable to one specific application or domain.
 
-Q16 What is an ontology?
-A16: an ontology is a collection of meta-knowledge relevant to a specific domain.
+Q16: Describe a fact.
+A16: A fact is a statement which asserts that a relationship holds for an object-subject pair.
 
-Q17: What is the domain of a relationship?
-A17: The domain of a relationship is the set of things that are valid subjects of that relationship.
+Q17: Describe a rule.
+A17: A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.
 
-Q18: Give me an example of the domain of a relationship.
-A18: The domain of hasUWEPhoneNumber() is members of UWE staff.
+Q18: Tell me about long-term knowledge?
+A18: Long-term knowledge is valid every time a programme is run.
 
-Q19: What is the range of a relationship?
-A19: The range is the set of things that are valid objects of that relationship.
+Q19: Tell me about short-term knowledge.
+A19: Short-term knowledge is only valid for a particular instance or run of a programme.
 
-Q20: Give me an example of the range of a relationship.
-A20: The range of hasUWEPhoneNumber is the set of 4 digit numbers prefixed by 0117328
+Q20: Tell me about generic knowledge.
+A20: Generic knowledge is relevant to more than one application or domain.
 
-Q21: What is the cardinality of a relationship?
-A21: The cardinality of a relationship tells us how many values in the range each thing in the domain maps onto, and vice-versa.
+Q21: Tell me about domain-specific knowledge.
+A21: Domain-specific knowledge is only applicable to one specific application or domain.
 
-Q22: Give me an example of the cardinality of a relationship.
-A22: The relationship hasUWEPhoneNumber is one to one.
+Q22: Tell me about a fact.
+A22: A fact is a statement which asserts that a relationship holds for an object-subject pair.
 
-Q23: Why is knowing that useful?
-A23: Because knowing the cardinality is one-to-one lets us infer that things are identical -for example that the Jim Smith with the phone number 01173287417 is the same Jim Smith that has email address james.smith@uwe.ac.uk
+Q23: Tell me about a rule.
+A23: A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.
 
-Q24: What is a transitive relationship?
-A24: A transitive relationship R is one where if (a R b), and (b R c), we can infer that (a R c).
+Q24: Illustrate the concept of long-term generic knowledge.
+A24: The equations of motion used to calculate the flight-path of a bird in the game Angry Birds.
 
-Q25: Give me an example of a transitive relationship.
-Q25: If  Joe isOlder than Donald and Donald isOlderThan Kamala then Joe isOlderThan Kamala.
+Q25: Illustrate the concept of long-term domain-specific knowledge.
+A25: The weight of the different types of birds in the game Angry Birds.
 
-Q26: Why is knowing that useful?
-A26: Because knowing a relationship is transitive lets us rapidly generate new facts
+Q26: Illustrate the concept of short-term generic knowledge.
+A26: The date on which a specific episode of Angry Birds is played is generic because it could also be used by another programme.
 
-Q27: Please myBot, what is a rule?
-A27:  A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.
+Q27: Illustrate the concept of short-term domain-specific knowledge.
+A27: The number of birds that a user has fired in a particular episode of Angry Birds.
 
+Q28: Illustrate the concept of a fact.
+A28: Jim Smith from UWE hasUWEPhoneNumber 0117 3287417.
 
-Q28: Describe long-term knowledge?
-A28: Long-term knowledge is  valid every time a programme is run.
+Q29: Illustrate the concept of a rule.
+A29: If isUWEStaff(X) then hasUWEPhone (X).
 
-Q29: Describe domain-specific knowledge?
-A29: Domain-specific knowledge is only applicable to one specific application or domain.
+Q30: Provide an example of long-term generic knowledge.
+A30: The equations of motion used to calculate the flight-path of a bird in the game Angry Birds.
 
+Q31: Provide an example of long-term domain-specific knowledge.
+A31: The weight of the different types of birds in the game Angry Birds.
 
-Q30: Tell me about long-term knowledge.
-A30: Long-term knowledge is  valid every time a programme is run.
+Q32: Provide an example of short-term generic knowledge.
+A32: The date on which a specific episode of Angry Birds is played is generic because it could also be used by another programme.
 
-Q31: Tell me about domain-specific knowledge.
-A31: Domain-specific knowledge is only applicable to one specific application or domain.
+Q33: Provide an example of short-term domain-specific knowledge.
+A33: The number of birds that a user has fired in a particular episode of Angry Birds.
 
+Q34: Please provide an example of a fact.
+A34: Jim Smith from UWE hasUWEPhoneNumber 0117 3287417.
 
-Q32: Describe a relationship
-A32: A relationship is a function that links an object with a subject (usually a property).
+Q35: Why is knowing that useful?
+A35: I have no answer for that.
 
-Q34: Mybot, please describe a transitive relationship?
-A34: A transitive relationship R is one where if aRb, and bRc, we can infer that aRc.
+Q36: Please provide an example of a rule.
+A36: If isUWEStaff(X) then hasUWEPhone (X).
 
+Q37: What is a rule mybot?
+A37: A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.
 
-Q35: Illustrate the concept of long-term generic knowledge.
-A35: The equations of motion  used to calculate the flight-path of a bird in the game Angry Birds.
+Q38: Please give me an example of a rule.
+A38: If isUWEStaff(X) then hasUWEPhone (X).
 
-Q36: Illustrate the concept of long-term domain-specific knowledge please.
-A36: The weight of the different types of birds in the game Angry Birds.
+Q39: Please myBot what is a rule?
+A39: A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.
 
-Q37: Provide an example of short-term generic knowledge.
-A37: The date on which a specific episode of Angry Birds is played is generic because it could also be used by another programme.
+Q40: Mybot please what is a rule?
+A40: A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.
 
-Q38: Tell me one example of of short-term domain specific knowledge.
-A38: The number of birds that a user has fired in a particular episode of Angry Birds.
+Q41: Describe how AIML allows variables in its long-term knowledge?
+A41: AIML has wildcards and srai for that purpose.
 
-Q39: Describe how AIML allows variables in its long term knowledge?
-A39: AIML has wildcards and srai for that purpose.
+Q42: Why is knowing that useful?
+A42: Because it allows us to make statements that apply to classes of things or questions.
 
-Q40: Tell me about how AIML supports variables for short term knowledge?
-A40: Predicate variables can be created and have values accessed using set and get tag pairs.
-
-Q41: How does AIML provide context during a conversation.
-A41: AIML supports context through the use of the that tag to refer to previous bot answers, and via setting variables such as topic.
-
-Q42: Give an example of why first order logic is not decideable
-A42: Because AIML allows variables in rules, it is possible to write a syntactically correct knowledge base that is endlessly recursive because it contains srai loops.
-
-Q43: What is an RDF tuple?
-A43: An RDF tuple is a set of object predicate subject where each of the three parts is unambuously defined.
+Q43: How does AIML provide context during a conversation.
+A43: AIML supports context through the use of the that tag to refer to previous bot answers, and via setting variables such as topic.
 
 Q44: Why is knowing that useful?
-A44: Because if you share definitions then you allow shared reasoning. This is the point of the semantic web.
-
-Q45: Give me an example of the semantic web.
-A45: If organisations tag their websites with metadata using standard definitions  then search engines can extract useful things like locations and opening hours. 
-
-Q46: Please illustrate the concept of a fact.
-A46: Jim Smith from UWE hasUWEPhoneNumber 0117 3287417.
-
-Q47: Why is knowing that useful?
-A47: I have no answer for that.
-
-Q48: Jim Smith from UWE hasUWEPhoneNumber 0117 3287417.
-A48: I have no answer for that.
-
-Q49: Why is knowing that useful?
-A49: Because it is always good to discover gaps in our knowledge.
+A44: The fourth word in this question is an example of how some words can only be understood in context. 

@@ -1,6 +1,8 @@
 misc
+.ipynb_checkpoints
 lectures/.ipynb_checkpoints
 playground/.ipynb_checkpoints
 tutorials/.ipynb_checkpoints
+coursework/.ipynb_checkpoints
 .DS_Store
 .pyc
