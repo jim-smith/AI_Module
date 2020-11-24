@@ -4,5 +4,7 @@ lectures/.ipynb_checkpoints
 playground/.ipynb_checkpoints
 tutorials/.ipynb_checkpoints
 coursework/.ipynb_checkpoints
+coursework/*cats*.aiml
+lectures/figures/KR1/.ipynb_checkpoints
 .DS_Store
 .pyc
