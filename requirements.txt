@@ -9,4 +9,4 @@ random
 Ipython.display
 sys
 ipywidgets
-
+re
