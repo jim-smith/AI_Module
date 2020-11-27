@@ -1,5 +1,6 @@
 <aiml version="1.0.1" encoding="UTF-8">
 
+<category> <pattern>HI</pattern><template><srai>GREETINGS</srai></template></category>
 
 <category>
   <pattern> GREETINGS</pattern>
