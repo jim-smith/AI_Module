@@ -2,8 +2,10 @@
 # coding: utf-8
 
 # # AIML Coursework marker
+# 
+# <div class="alert alert-block alert-danger"> <b>REMEMBER:</b> You need to make sure you are running this code within the virtual environment you created using 'AIenv'.<br> In Jupyter click on the kernel menu then change-kernel. In VSCode use the kernel selector in the top-right hand corner </div>
 
-# In[1]:
+# In[10]:
 
 
 import re
@@ -23,14 +25,15 @@ def preprocessSingleInput(bot,theInput):
 # - you can change the name of your input file to something other than "student.aiml" if you want.
 # - **Dont change anything else**
 
-# In[2]:
+# In[11]:
 
 
 debug = False
 debug2 = False
 theAIMLfile = 'student.aiml'
-theQuestionsFile = "coursework-questions-and-responses.txt"
-outputFile = theAIMLfile[:-5] +"-results.txt"
+theQuestionsFileName = "coursework-questions-and-responses.txt"
+responsesFileName = theAIMLfile[:-5] +"-responses.txt"
+feedbackFileName = theAIMLfile[:-5] +"-feedback.txt"
 NUMQS =45
 NUMCONTEXTQS=3
 contextQuestions = [35,42,44]
@@ -38,7 +41,7 @@ contextQuestions = [35,42,44]
 
 # # Read the questions and answer from file, then randomise the order
 
-# In[3]:
+# In[12]:
 
 
 #declare arrays to hold the questions and answers
@@ -47,12 +50,12 @@ responses = []
 
 # read the questions and answers in
 # Using readline() 
-file1 = open(theQuestionsFile, 'r') 
+qFile = open(theQuestionsFileName, 'r') 
 thisQ = 0
   
 while True: 
     # Get next line from file 
-    line = file1.readline() 
+    line = qFile.readline() 
     if not line: 
         print("unexpected end of file")
         break
@@ -68,7 +71,7 @@ while True:
         if(debug2):
             print("question {} is: {}".format(thisQ,questions[thisQ]))        
         
-    line = file1.readline() # next line should be the corresponding answer
+    line = qFile.readline() # next line should be the corresponding answer
     if not line: 
         print("unexpected end of file")
         break
@@ -85,7 +88,7 @@ while True:
     
     thisQ += 1
     # then read the empty line separating QnA paits
-    line = file1.readline()
+    line = qFile.readline()
     
     # if line is empty 
     # end of file is reached 
@@ -94,7 +97,7 @@ while True:
     if(debug2):
         print("")
 
-file1.close() 
+qFile.close() 
 
 
 
@@ -138,7 +141,7 @@ else:
 
 # # Create the chatbot
 
-# In[4]:
+# In[13]:
 
 
 # Create Chatbot and read the candidate AIML file
@@ -148,7 +151,7 @@ checkBot.verbose(True)
 
 # ## Clear any old categories,  reload the AIML file
 
-# In[5]:
+# In[14]:
 
 
 checkBot.resetBrain()
@@ -163,7 +166,7 @@ print('This number should help you fix misformed categories if needed\n')
 
 # ### See how frequently different language constrcuts have been used
 
-# In[6]:
+# In[15]:
 
 
 # either figure out how to query the bot categories
@@ -199,7 +202,7 @@ file2.close()
 
 # # Ask the questions, check and store the responses
 
-# In[7]:
+# In[16]:
 
 
 
@@ -208,7 +211,7 @@ file2.close()
 numCorrect = 0
 numContextQsCorrect=0
 numNoMatch=0
-file3 = open(outputFile,'w')
+responsesFile = open(responsesFileName,'w')
 
 for q in range (NUMQS):
     thisQ = order[q]
@@ -216,18 +219,18 @@ for q in range (NUMQS):
     botResponse = checkBot.respond(questions[thisQ])
     if(botResponse==""):
         numNoMatch +=1
-    file3.write('Q{:2d}: {}\n'.format(thisQ, questions[thisQ]))
-    file3.write('Expected response: {}\n'.format(responses[thisQ]))
-    file3.write('Your bot response: {}\n'.format(botResponse))
+    responsesFile.write('Q{:2d}: {}\n'.format(thisQ, questions[thisQ]))
+    responsesFile.write('Expected response: {}\n'.format(responses[thisQ]))
+    responsesFile.write('Your bot response: {}\n'.format(botResponse))
     # check if it matches the required input
     if botResponse == responses[thisQ] :
         #print('question {} answered correctly'.format(thisQ))
-        file3.write('*** Question answered correctly\n\n')
+        responsesFile.write('*** Question answered correctly\n\n')
         numCorrect +=1
         if thisQ in contextQuestions:
             numContextQsCorrect +=1
     else:
-        file3.write('Question answered incorrectly\n\n')
+        responsesFile.write('Question answered incorrectly\n\n')
         if(debug):
             theInput = questions[thisQ]
             print('Q{} {}\n gets preprocessed as:{}'.format(thisQ,theInput,preprocessSingleInput(checkBot,theInput)))
@@ -236,13 +239,17 @@ for q in range (NUMQS):
             lastThat = checkBot.getPredicate("_outputHistory")
 
 # write final line to log file and exit
-file3.write(' In total you got {} questions correct'.format(numCorrect))
-file3.close()
+responsesFile.write(' In total you got {} questions correct'.format(numCorrect))
+responsesFile.close()
 
 
 # # Calculate final score and feedback
 
-# In[11]:
+# In[17]:
+
+
+
+feedbackFile = open(feedbackFileName,'w')
 
 
 # calculate final score
@@ -255,18 +262,20 @@ if (numCorrect==NUMQS):
         finalScore = 90 - numCategories
 
 # provide output for DEWIS
-print('<SCORE>{}</SCORE>'.format(finalScore))
+feedbackFile.write('<SCORE>{}</SCORE>\n'.format(finalScore))
 
 feedback= "<MESSAGE> "
+feedback += "After removing duplicates, your bot used " + str(numCategories) + " categories\n"
 
 # what did the submission get wrong and why?
 if(numCorrect< NUMQS):
-    feedback += "Your bot answered some question incorrectly. File " + outputFile + "has more details\n"
+    feedback += "Your bot answered some question incorrectly. File " + responsesFileName + " has more details\n"
     feedback +="- Common mistakes are typos or extra spaces.\n" 
     if(numNoMatch>0):
-        feedback += "For " + numNoMath +" questions your bot did not have a matching category.\n"
-    if(numContextQsCorrect != NUMCONTEXTQS):
-        feedback+= "Your bot answered incorrectly for " "{} questions that require a sense of context.\n"
+        feedback += "For " + str(numNoMatch) +" questions your bot did not have a matching category.\n"
+    contextErrors = NUMCONTEXTQS - numContextQsCorrect
+    if( contextErrors >0 ):
+        feedback+= "Your bot answered incorrectly for " + str(contextErrors) + " questions that require a sense of context.\n"
 else: #
     feedback += "Your bot answered every question correctly using " + str(numCategories) + " categories\n"
     if ( srai_count==0  or wildcard_count ==0 or starslash_count==0):
@@ -274,17 +283,18 @@ else: #
     if (set_count==0 or that_count==0):
         feedback += "You can improve your score by remembering context and what the conversation is talking about.\n"
     if(condition_count==0):
-        feedback += "You can use <condition> to change behaviour within a cagegory\n"
+        feedback += "You can use <condition> to change behaviour within a category\n"
     if(numCategories <=11):
         feedback += "Congratulations, you have matched Jim's score!"
 
-feedback =  feedback + "</MESSAGE>"
-print(feedback)
+feedback =  feedback + "</MESSAGE>\n"
+feedbackFile.write(feedback)
+feedbackFile.close()
 
 
 # # Uncomment the cell below if you want to run your bot interactively
 
-# In[9]:
+# In[18]:
 
 
 #keepgoing= True
