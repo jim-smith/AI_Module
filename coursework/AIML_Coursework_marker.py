@@ -5,7 +5,7 @@
 # 
 # <div class="alert alert-block alert-danger"> <b>REMEMBER:</b> You need to make sure you are running this code within the virtual environment you created using 'AIenv'.<br> In Jupyter click on the kernel menu then change-kernel. In VSCode use the kernel selector in the top-right hand corner </div>
 
-# In[10]:
+# In[ ]:
 
 
 import re
@@ -25,7 +25,7 @@ def preprocessSingleInput(bot,theInput):
 # - you can change the name of your input file to something other than "student.aiml" if you want.
 # - **Dont change anything else**
 
-# In[11]:
+# In[ ]:
 
 
 debug = False
@@ -41,7 +41,7 @@ contextQuestions = [35,42,44]
 
 # # Read the questions and answer from file, then randomise the order
 
-# In[12]:
+# In[ ]:
 
 
 #declare arrays to hold the questions and answers
@@ -141,7 +141,7 @@ else:
 
 # # Create the chatbot
 
-# In[13]:
+# In[ ]:
 
 
 # Create Chatbot and read the candidate AIML file
@@ -151,7 +151,7 @@ checkBot.verbose(True)
 
 # ## Clear any old categories,  reload the AIML file
 
-# In[14]:
+# In[ ]:
 
 
 checkBot.resetBrain()
@@ -166,7 +166,7 @@ print('This number should help you fix misformed categories if needed\n')
 
 # ### See how frequently different language constrcuts have been used
 
-# In[15]:
+# In[ ]:
 
 
 # either figure out how to query the bot categories
@@ -202,7 +202,7 @@ file2.close()
 
 # # Ask the questions, check and store the responses
 
-# In[16]:
+# In[ ]:
 
 
 
@@ -245,7 +245,7 @@ responsesFile.close()
 
 # # Calculate final score and feedback
 
-# In[17]:
+# In[ ]:
 
 
 
@@ -264,37 +264,52 @@ if (numCorrect==NUMQS):
 # provide output for DEWIS
 feedbackFile.write('<SCORE>{}</SCORE>\n'.format(finalScore))
 
-feedback= "<MESSAGE> "
-feedback += "After removing duplicates, your bot used " + str(numCategories) + " categories\n"
+fstart=  "<MESSAGE>"
+fend = "</MESSAGE>\n"
+
+feedback = fstart + "After removing duplicates, your bot used " + str(numCategories) + " categories" +fend
+feedbackFile.write(feedback)
 
 # what did the submission get wrong and why?
 if(numCorrect< NUMQS):
-    feedback += "Your bot answered some question incorrectly. File " + responsesFileName + " has more details\n"
-    feedback +="- Common mistakes are typos or extra spaces.\n" 
+    feedback = fstart+ "Your bot answered one or more questions incorrectly." +fend 
+    feedbackFile.write(feedback)
+    feedback = fstart + "File " + responsesFileName + " has more details of your bots responses." +fend
+    feedbackFile.write(feedback)
+    feedback = fstart + "Common mistakes are typos or extra spaces" +fend
+    feedbackFile.write(feedback)
+    
     if(numNoMatch>0):
-        feedback += "For " + str(numNoMatch) +" questions your bot did not have a matching category.\n"
+        feedback = fstart + "For " + str(numNoMatch) +" questions your bot did not have a matching category." +fend
+        feedbackFile.write(feedback)
     contextErrors = NUMCONTEXTQS - numContextQsCorrect
     if( contextErrors >0 ):
-        feedback+= "Your bot answered incorrectly for " + str(contextErrors) + " questions that require a sense of context.\n"
-else: #
-    feedback += "Your bot answered every question correctly using " + str(numCategories) + " categories\n"
-    if ( srai_count==0  or wildcard_count ==0 or starslash_count==0):
-        feedback += "You can improve your score by generalising using srai and wildcards.\n"
-    if (set_count==0 or that_count==0):
-        feedback += "You can improve your score by remembering context and what the conversation is talking about.\n"
-    if(condition_count==0):
-        feedback += "You can use <condition> to change behaviour within a category\n"
-    if(numCategories <=11):
-        feedback += "Congratulations, you have matched Jim's score!"
+        feedback= fstart +"Your bot answered incorrectly for " + str(contextErrors) + " questions that require a sense of context." +fend
+        feedbackFile.write(feedback)
 
-feedback =  feedback + "</MESSAGE>\n"
-feedbackFile.write(feedback)
+else: #
+    feedback = fstart +"Your bot answered every question correctly using " + str(numCategories) + " categories" +fend
+    feedbackFile.write(feedback)
+    if ( srai_count==0  or wildcard_count ==0 or starslash_count==0):
+        feedback = fstart+ "You can improve your score by generalising using srai and wildcards." + fend
+        feedbackFile.write(feedback)
+    if (set_count==0 or that_count==0):
+        feedback = fstart + "You can improve your score by remembering context and what the conversation is talking about." +fend
+        feedbackFile.write(feedback)
+    if(condition_count==0):
+        feedback = fstart + "You can use <condition> to change behaviour within a category." +fend
+        feedbackFile.write(feedback)
+    if(numCategories <=11):
+        feedback = fstart + "Congratulations, you have matched Jim's score!" +fend
+        feedbackFile.write(feedback)
+
+
 feedbackFile.close()
 
 
 # # Uncomment the cell below if you want to run your bot interactively
 
-# In[18]:
+# In[ ]:
 
 
 #keepgoing= True
