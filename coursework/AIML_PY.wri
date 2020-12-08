@@ -1,0 +1,683 @@
+<SETTINGS>
+	<NUM_INPUTS>1
+	<NUM_PARAMETERS>2
+	<NUM_X_PARAMETERS>6
+	<NUM_FLAGS>6
+	<BESPOKE_VALUE>0
+	<USES_MATHML>0
+	<USES_SVG>0
+</SETTINGS>
+
+#===============
+
+<DESCRIPTOR>
+<BRIEF> 
+AIML marker - python version.
+</BRIEF>
+
+<DETAILED HTML> 
+Python AIML marker.</DETAILED>
+</DESCRIPTOR>
+
+#===============
+
+<PARAMETERS>
+
+# Whether or not we're in the 'compile-check-only' stage. 0 - compile check only.
+
+	$p1 = 1;		# The test proper
+
+#   $p1 = 0; 		# Does it compile only?
+
+
+# $p2 is a security identifier to access the code in the FEEDBACK section
+
+$p2 = integerRandom(10000,99999);
+
+$p2 .= integerRandom(10000,99999);
+
+$p2 .= integerRandom(10000,99999);
+
+</PARAMETERS>
+
+#===============
+
+<QUESTION>
+
+<PRINT>
+
+<PROMPT ID='1' HIDDEN></PROMPT>
+
+<p></p>
+
+<span style='color:blue;font-weight:bold'>AI Chatbox Coursework</span>
+
+<p></p>
+
+Supply your AIML code as given by the coursework instructions.
+
+<p></p>
+
+<input type='hidden' id='Q1_codearea' name='Q1_codearea' value=''>
+
+<!-- called Q1_codearea so that it is picked up in AJAX and encoded -->
+
+<div id='browserBlock' class='hidden' style='position:absolute;	top:1px;left:1px;width:100%;height:100%;background-color:grey;color:white;border-style:solid;border-width:1px;padding:15px 20px 5px 20px;'>
+<p></p>
+<b>INCOMPATIBLE BROWSER</b>
+<p></p>
+Please note that you are using an incompatible browser for downloading files on the internet.
+<p></p>
+Please ensure that you are using a relatively modern broswer so that you can peform this task.
+<p></p>
+Please close this window and perform the task on a different browser.
+<p></p>
+</div>
+
+<p></p>
+
+<p></p>
+
+<input type="file" id="localFileInput" name="localFileInput" />
+
+<div id='file_accept_div' class='hidden' style='color:darkgreen;font-weight:bold;'>
+<p></p>
+New File Accepted - this message will disappear in four seconds.
+<p></p>
+For the system to receive this file you will have to press the <b>Submit</b> button.
+<p></p>
+</div>
+
+<div id='noFileLoaded_div' style='color:darkred;font-weight:bold;font-size:80%'>
+<p></p>
+No file loaded yet.
+<p></p>
+</div>
+
+<div id='fileLoaded_div' class='hidden' style='color:darkgreen;font-weight:bold;font-size:80%'>
+<p></p>
+File is loaded.
+<p></p>
+</div>
+
+<div id='file_notAccept_div' class='hidden' style='color:red;font-weight:bold;'>
+<p></p>
+Please note that your file contains an unacceptable keyword in the code. On submission, your file will be rejected. Please alter your file before submission.
+The specific reason for the rejection is given below:
+<p></p>
+<span id='file_notAccept_reason_div'></span>
+<p></p>
+</div>
+
+<script>
+function hide_file_accept_div()
+{
+	document.getElementById('file_accept_div').style.display = 'none';
+	document.getElementById('fileLoaded_div').style.display = 'block';
+}
+</script>
+
+<p></p>
+
+<div style='font-size:80%;'>
+Please note that, if you are using Internet Explorer, due to a bug in that browser, if you want to reload the same file again in this session then you will have
+to load it under a different filename. That is, if you reload the same file again in the same session (having possibly made changes to it), Internet Explorer
+will not recognise your update and the 'New File Accepted' message will not appear.
+</div>
+
+
+		<script>
+		if (!window.FileReader)
+		{
+			// Do a browser block.
+			
+			document.getElementById('browserBlock').style.display = 'block';
+		}
+		
+		function readSingleFile(evt) 
+		{
+			//Retrieve the first (and only!) File from the FileList object
+
+			document.getElementById('file_notAccept_div').style.display = 'none';
+
+			var fileElement = evt.target.files[0]; 
+
+			if (fileElement) 
+			{
+			
+				var r = new FileReader();
+				
+				r.onload = function(e) 
+				{ 
+					var contents = e.target.result;
+					
+					// do a check on somethings in the code
+					
+					// No checks for the AIML file
+
+					errorReason = '0';
+
+					if (errorReason === '0')
+					{
+						document.getElementById('Q1_codearea').value = contents;
+
+					
+						document.getElementById('file_accept_div').style.display = 'block';
+
+						document.getElementById('noFileLoaded_div').style.display = 'none';
+
+						document.getElementById('fileLoaded_div').style.display = 'none';
+	
+
+						setTimeout(function(){hide_file_accept_div()},3000);
+					}
+					else
+					{
+						document.getElementById('Q1_codearea').value = ' ';
+
+						document.getElementById('file_notAccept_reason_div').innerHTML = errorReason;
+
+						document.getElementById('file_notAccept_div').style.display = 'block';
+					}
+					
+					contents = '';
+					
+					// refresh the file input....!
+				}
+			  
+				r.readAsText(fileElement);
+			} 
+			else 
+			{ 
+				alert("Failed to load file");
+			}
+			
+			return 0;
+		}
+
+		//===
+		
+		function addEvent(evnt, elem, func)
+		{
+			if (elem.addEventListener)
+			{
+				elem.addEventListener(evnt, func, false);
+			}
+			else if (elem.attachEvent)
+			{
+				elem.attachEvent("on"+evnt, func)
+			}
+			else
+			{
+				alert('Unrecognised browser action');
+			}
+		}
+		
+		addEvent('change', document.getElementById('localFileInput'), readSingleFile);		// cross-browser implementation
+		
+		</script>
+
+
+</PRINT>
+
+</QUESTION>
+
+#===============
+
+<SOLUTION>
+
+#===
+
+# Need to put a 1Mb limit on downloads $CGI::POST_MAX=1024*1024;
+
+#===
+
+# Some file housekeeping
+
+# Is this a general assessment or a Private catalogue question - need to account sometime for a PUBLIC catalogue question.
+
+$x5 = ($projectName =~ m/^PRIVATE\-/)?1:0;
+
+#=====================================
+
+our $baseFolder;
+
+my $sourceFilename = "AIML_Coursework_marker.py";
+my $questionsFilename = "coursework-questions-and-responses.txt";
+
+my $thisRelease = '1502-uwe'; 		# The 1502-uwe is hard coded - this needs to change.
+
+my $aimlVersion = 'aiml';	
+
+#my $sourceFile = "$baseFolder/ucode/$thisRelease/fixed/non_project_/$aimlVersion/$sourceFilename";	
+
+my $sourceFile ="/home/j4-smith/pyAIML/AIML_Coursework_marker.py";
+my $questionsFile = "/home/j4-smith/pyAIML/coursework-questions-and-responses.txt";
+#==
+
+# Now for the destination folder - post 2018, these now reside in the 'data-code' folder
+
+my $destFolder;
+
+{
+	$destFolder = "$baseFolder/data-code/$thisRelease/nobody/$groupName/";
+
+	$destFolder .= ($x5)?'catalogue/':'assessment/';
+
+	my $assessName = $projectName;
+
+	$assessName =~ s/^PRIVATE\-//;
+
+	$destFolder .= "$assessName/$STUDENT_ID";
+
+	if (!-e $destFolder)
+	{
+		make_path($destFolder) or die 'Cannot make_path the $destFolder';
+	}
+}
+
+#==
+
+copy("$sourceFile","$destFolder/$sourceFilename") or die "Cannot copy $destFolder/$sourceFilename";
+copy("$questionsFile","$destFolder/$questionsFilename") or die "Cannot copy $destFolder/$questionsFilename";
+
+#=====================================
+
+my $text = $query->param('Q1_codearea');
+
+$x6 = length($text);
+
+$x3 = "$destFolder/$processNum";
+
+
+if (-e $x3)
+{
+	die "Folder $x3 already exists.\nDid you re-create a question that overwrites an old question? If so, clear the data folder for this question.\n";
+}
+
+mkdir("$x3") or die "cannot create folder for process number";
+
+mkdir("$x3/id$p2");		# this is used as a security check.
+
+if ($x6 > 20000)
+{
+	$x4 = '2';			# file is too large
+}
+elsif ($text !~ m/\w/)
+{
+	$x4 = '0';			# effectively empty
+}
+else
+{
+	#=====
+	#
+	#	Got some input
+	#
+
+	my @textArray = split(/\n/,$text);
+
+	$x4 = '1';
+
+	open(FILEOUT,"> $destFolder/student.aiml");
+	print FILEOUT $text;
+	close(FILEOUT);
+	
+	# This runs in 'sh'
+
+	$x1 = 1;
+
+	my $runString = "cd $destFolder; chmod 777 .";		# the chmod to allow for a shell to run in this folder.
+
+	$runString .= "echo 'DEWIS RUN' > ./student.wri; python AIML_Coursework_marker.py >> ./student.wri;";
+	
+	my @output2 = `$runString`;			# This EXECUTES the code.
+
+#	#===
+#
+#	# Hide any file errors in the 'student.wri'
+#	
+#	my $errFound = 0;
+#	
+#	open(FILIN,"< $destFolder/student.wri");
+#	my	@studentWri = <FILIN>;
+#	close(FILIN);
+#
+#	my @errArray = grep{/file:\//} @studentWri;
+#
+#	if (@errArray)
+#	{
+#		foreach my $line (@studentWri)
+#		{
+#			# e.g. file:/usr/lib/d/ucode/catalogue/nobody/1303uwe/ufcfe3_15_1/JAVA_01/2/student/aiml/student.aiml; lineNumber: 1; columnNumber: 6; XML document structures must start and end within the same entity.
+#		
+#			if ($line =~ m/file:\/.*\;/)
+#			{
+#				$line =~ s/file:\/(.*?)\;/file:REPLACEDLINE/;
+#				
+#				my $longFilename = $1;
+#				
+#				$longFilename =~ s/^.*\///;
+#			
+#				$line =~ s/REPLACEDLINE/$longFilename/;
+#			}
+#		}
+#		
+#		open(FILIN,"> $destFolder/student.wri");
+#		print FILIN @studentWri;
+#		close(FILIN);
+#	}
+
+	#===
+
+	# Store the crucial files for recording in a folder representative of the process number.
+
+	my @cpFiles2 = ('student.aiml','student.wri','student-responses.txt','student-feedback.txt');
+
+	foreach my $file (@cpFiles2)
+	{
+		if (-e "$destFolder/$file")
+		{
+			copy("$destFolder/$file","$x3/$file");
+
+			unlink "$destFolder/$file";
+		}
+		unlink "$destFolder/AIML_Coursework_marker.py";
+	}
+
+}
+
+#===
+
+#===
+
+# The existence of an executable file will indicate that the code compiled, non-existence otherwise.
+
+$c1 = 0;
+
+</SOLUTION>
+
+#===============
+
+<MARKING>
+
+	$f2 = -2;
+
+	my $filename = "$x3/student-feedback.txt";
+
+	if (-e $filename)
+	{
+		$f2 = -1;
+
+		open(FILIN,"< $filename");
+		my @returns = <FILIN>;
+		close(FILIN);
+
+		my @finalScore_ = grep {/SCORE/} @returns;
+		my $numLines = @finalScore_;
+		if ($numLines == 1)
+		{
+			my $finalScore = $finalScore_[0];
+			$finalScore =~s/[^\d.]//g;   
+			$f2 = $finalScore;
+		}
+		else
+		{ $f2=99}
+	}
+
+$filename = "$x3/student-feedback.txt";
+
+if (-e $filename)
+	{
+		open(FILIN,"< $filename");
+		my @returns = <FILIN>;
+		close(FILIN);
+
+		my @jimOutput = grep {/MESSAGE/} @returns;
+		
+		my $numLines = @jimOutput;
+
+		my $jimString = '';
+
+		if ($numLines)
+		{
+			foreach my $line (@jimOutput)
+			{
+
+				# < > tags will show in the feedback. Html tags denoted by << >>
+
+				$line =~ s/<MESSAGE>//g;
+				$line =~s/<\/MESSAGE>//g;
+
+				if ($line =~ m/[<>]/)
+				{
+					$line =~ s/<</HTML_/g;
+					$line =~ s/>>/_HTML/g;
+					$line =~ s/</&lt;/g;
+					$line =~ s/>/&gt;/g;
+					$line =~ s/HTML_/</g;
+					$line =~ s/_HTML/>/g;
+				}
+
+				$jimString .= "&nbsp;&bull;&nbsp;$line<p></p>\n";
+			}
+
+			open(FILOUT,"> $x3/student.html");
+			print FILOUT $jimString;
+			close(FILOUT);
+
+			foreach my $return (@returns)
+			{
+				$return =~ s/^\s*MESSAGE\:\s*//g;
+			}
+
+			open(FILIN,"> $filename");
+			print FILIN @returns;
+			close(FILIN);
+		}
+	}
+
+</MARKING>
+
+#===============
+
+<SCORES>
+
+<F1 NULL>
+<F2 MANUAL>
+
+<MANUAL>
+
+$MAX_MARK2 = 100;
+
+$MARK2 = ($f2 >= 0)?$f2:0;
+
+</MANUAL>
+
+</SCORES>
+
+#===============
+
+<REPORT>
+
+if ($x4 eq '2')
+{
+	<PRINT>
+	<div style='color:darkred;font-weight:bold;'>
+	<p></p>
+	Please note that your downloaded file was too big.
+	<p></p>
+	You need to contact your module leader to discuss the fact that you submitted a file that was too big.
+	<p></p>
+	</div>
+	</PRINT>
+}
+elsif ($x4 eq '0')
+{
+	<PRINT>
+	<div style='color:darkred;font-weight:bold;'>
+	<p></p>
+	Please note that no file was detected in your download - you submitted either an empty file or no file at all.
+	<p></p>
+	You need to contact your module leader to discuss the fact that you submitted an empty or null file.
+	<p></p>
+	</div>
+	</PRINT>
+}
+else
+{
+		my $divBox = '';
+
+		my $htmlFile = "$x3/student.html";
+
+		if (-e $htmlFile)
+		{
+			open(FILINT,"$x3/student.html");
+			my @htmlContent = <FILINT>;
+			close(FILINT);
+	
+			$divBox = <QQ><div style='border:solid 3px green;padding-top:10px;padding-right:10px;'>
+The contents of this box contains some information about the marking process.<p></p>
+</QQ>
+
+			foreach my $lin (@htmlContent)
+			{
+				$divBox .= $lin;
+			}
+
+			$divBox .= "</div>";
+		}
+
+	
+		<PRINT>
+	<p></p>
+	Please click on the <b>FEEDBACK</b> button to obtain more information about your submission. 
+	<p></p>
+$divBox	
+</PRINT>
+}
+
+
+</REPORT>
+
+#===============
+
+<FEEDBACK>
+
+<FEEDBACK_PART1>
+
+our $cgiBase;
+
+my $dataFolder;
+
+$dataFolder = encode_base64($x3,'');		# not a secure encoding but good enough at the moment.
+
+
+<PRINT>
+The question asked you to submit your AIML-file.
+<p></p>
+</PRINT>
+
+if ($x4 eq '2')
+{
+	<PRINT>
+	<div style='color:darkred;font-weight:bold;'>
+	<p></p>
+	Please note that your downloaded file was too big.
+	<p></p>
+	You need to contact your module leader to discuss the fact that you submitted a file that was too big.
+	<p></p>
+	</div>
+	</PRINT>
+}
+elsif ($x4 eq '0')
+{
+
+		
+
+	<PRINT>
+	<div style='color:darkred;font-weight:bold;'>
+	<p></p>
+	Please note that no file was detected in your download - you submitted either an empty file or no file at all.
+	<p></p>
+	You need to contact your module leader to discuss the fact that you submitted an empty or null file.
+	<p></p>
+	</div>
+	</PRINT>
+}
+else
+{
+
+my $divBox = '';
+
+		my $htmlFile = "$x3/student.html";
+
+		if (-e $htmlFile)
+		{
+			open(FILINT,"$x3/student.html");
+			my @htmlContent = <FILINT>;
+			close(FILINT);
+	
+			$divBox = <QQ><div style='border:solid 3px green;padding-top:10px;padding-right:10px;'>
+The contents of this box contains some information about the marking process.<p></p>
+</QQ>
+
+			foreach my $lin (@htmlContent)
+			{
+				$divBox .= $lin;
+			}
+
+			$divBox .= "</div>";
+		}
+
+my $styleFormat = <QQ>style='cursor:pointer;font-weight:bold;text-decoration:underline;color:darkgreen;'</QQ>
+
+<PRINT>
+In this feedback section we supply you with the following links:
+<ul>
+<li><span onclick='retrieveResultsFile("student.aiml");' $styleFormat>The AIML-file that you supplied</span>.<p></p></li>
+<li><span onclick='retrieveResultsFile("student-feedback.txt");' $styleFormat>The results file generated by the python code</span>.<p></p></li>
+<li><span onclick='retrieveResultsFile("student-responses.txt");' $styleFormat>The list of questions, expected responses, and what your bot responded,  generated by the python code</span>.<p></p></li>
+<li><span onclick='retrieveResultsFile("student.wri");' $styleFormat>Detailed Output generated at runtime by the Interpreter which may show extra errors</span>.<p></p></li>
+</ul>
+Clicking on the above links will supply you with the appropriate text files.
+
+<p></p>
+
+<form id='getcode' name='getcode' action='$cgiBase/std/get_students_source_code/index.cgi'>
+<input type='hidden' name='dataLoc' value='$dataFolder'>
+<input type='hidden' name='fileName' id='getcodeFilename' value='NOFILE'>
+<input type='hidden' name='security' value='$p2'>
+</form>
+
+<script>
+function retrieveResultsFile(filnam)
+{
+	document.getElementById('getcodeFilename').value = filnam;
+	
+	document.getcode.submit();
+}
+</script>
+
+<p></p>
+$divBox
+
+</PRINT>
+
+}
+
+<FEEDBACK_PART2>
+
+<PRINT>
+This area is empty and will be blocked in the actual assessment release.
+</PRINT>
+
+
+<FEEDBACK_PART3>
+
+<PRINT>
+&nbsp;
+</PRINT>
+
+</FEEDBACK>
+
+#===============
