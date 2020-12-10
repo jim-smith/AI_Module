@@ -41,7 +41,7 @@ body.rise-enabled div.inner_cell>div.text_cell_render.rendered_html {
  padding-left: 0px;
  margin: 0px;
  margin-left: 0px;
- margin-top: -10px;/*originally 0*/
+ margin-top: 0px;/*originally 0*/
 }
 
 .rendered_html ol {
@@ -50,10 +50,6 @@ body.rise-enabled div.inner_cell>div.text_cell_render.rendered_html {
 
 }
 
-.rendered_html p + ul {
-    margin-top: -10px;
-    padding:0
-}
 
 .rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
     font-size: 100%;
