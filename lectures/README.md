@@ -131,16 +131,28 @@ Lectures: Machine_Learning_Introduction_and_Types.ipynb
 - Activity:
 - 15 minutes: Unsupervised leaning with  k-Means example for Iris data
 - Activity:
+    TODO kmean coding example
 - 15 minutes: Reinforcement Learning (popular video) simple code?
-- Activity:
+- TODO QLearning example
 Tutorial recap  questions using mentimeter:
 - Types of problem and algorithm from games, recommender systems
 Tutorial activity
 - Notebook using plotly libraries to create some visualisations for versions of the iris data then apply k-means from scikit-learn, and use this to illustrate considerations for distance-based models like the need for normalisation, effect of noisy/irrelevant features
- - Use the tutorial plan from 19/20 week 6 but might need a lot of help to make these interactive rather than coding seaborn themselves? Or just seaborn factorplots?
+ - Use the tutorial plan from 19/20 week 6 but might need a lot of help to make these interactive.  **Avoid seaborn?** just use pandas scatter_matrix() plots?
+ - load iris data into a pandas dataframe
+ -  seperate it out into X and Y
+ - call pandas scatter_matrix()
+ - run KMeans in 4D then repeat scattteer_matrix with colouring
+ - run KMEans in 2D and do colouring
+ - now normaliuse the data and rerun- do youy get better clusters?
+    
 
 - Stretch activity: apply algorithms to the artificial fruit  dataset from week1  
-Self-study: update your revision bot with this week;s core concepts
+
+Self-study: 
+- Update your revision bot with this week;s core concepts
+- Really nice explanation of Q-learning here: http://mnemstudio.org/path-finding-q-learning-tutorial.htm
+    
 
 ### Week 6: Supervised Machine Learning
 Learning Outcomes
