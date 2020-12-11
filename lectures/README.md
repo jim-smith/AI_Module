@@ -125,7 +125,8 @@ Self-study:
 Learning Outcomes
 - Identify and illustrate the legal and ethical issues around the use of machine learning
 - Identify and illustrate the difference between unsupervised, reinforcement and supervised learning
-- Formulate and apply simple unsupervised learning algorithms and illustrate their use
+- Formulate and apply simple unsupervised learning algorithms and illustrate their use.
+    
 Lectures: Machine_Learning_Introduction_and_Types.ipynb
 - 15 minutes: types of ML
 - Activity:
@@ -133,18 +134,18 @@ Lectures: Machine_Learning_Introduction_and_Types.ipynb
 - Activity:
     TODO kmean coding example
 - 15 minutes: Reinforcement Learning (popular video) simple code?
-- TODO QLearning example
+
 Tutorial recap  questions using mentimeter:
 - Types of problem and algorithm from games, recommender systems
+    
 Tutorial activity
 - Notebook using plotly libraries to create some visualisations for versions of the iris data then apply k-means from scikit-learn, and use this to illustrate considerations for distance-based models like the need for normalisation, effect of noisy/irrelevant features
  - Use the tutorial plan from 19/20 week 6 but might need a lot of help to make these interactive.  **Avoid seaborn?** just use pandas scatter_matrix() plots?
- - load iris data into a pandas dataframe
- -  seperate it out into X and Y
- - call pandas scatter_matrix()
- - run KMeans in 4D then repeat scattteer_matrix with colouring
- - run KMEans in 2D and do colouring
- - now normaliuse the data and rerun- do youy get better clusters?
+ - load iris data , set labels - blank for all of them
+ - pplot scatter matrix: I'll have ot provide pyplot code to do that
+ - run KMeans in 4D then repeat scatter_matrix with colouring   look into cluster matrix space
+ - run KMEans in 2D and do colouring ( )
+ - now normalise the data and rerun- do you get better clusters?
     
 
 - Stretch activity: apply algorithms to the artificial fruit  dataset from week1  
