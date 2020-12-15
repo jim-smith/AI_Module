@@ -1,8 +1,10 @@
 # AI_Module
-Notebooks and resources  Jim's Artificial Intelligence 1 module
+Notebooks and resources  the Artificial Intelligence 1 module
 
-- **Lectures**. materials used ot creae lectures and videos
-- **tutorials** all the materia ls you nee dfor the weekly tutorials
+**Structure.md**: the mnodule structure week by week
+
+- **Lectures**. materials used to create lectures and videos
+- **tutorials** all the materials you need for the weekly tutorials
 - **slides-as-pdf's**  c pdf versions of the lecture slides  
 created using the workflow
    - 'jupyter nbconvert --to slides your_talk.ipynb --post serve'
