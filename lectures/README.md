@@ -155,12 +155,12 @@ Self-study:
 - Really nice explanation of Q-learning here: http://mnemstudio.org/path-finding-q-learning-tutorial.htm
     
 
-### Week 6: Supervised Machine Learning
+### Week 6: Supervised Machine Learning 
 Learning Outcomes
 - Identify and illustrate the legal and ethical issues around the use of supervised machine learning
 - Identify formulate and apply the basic processes of supervised machine learning
 - Understand the role of data in estimating accuracy 
-Lectures: recap then
+Lectures: Supervised_Machine_Learning.ipynb
 - 15 minutes: basic model building process: train and test (Validation and model selection are in L2)
 - Activity:
 - 15 minutes:  types of model: instance-based (kNN) vs explicit (decision trees,rules) 
@@ -179,11 +179,11 @@ Self-study: update your revision bot with this week;s core concepts
 
 
 
-### Week 7: Artificial Neural Networks 1:Perceptrons
+### Week 7: Artificial Neural Networks 1:Perceptrons 
 Learning Outcomes
 - Principles of biological and artificial neural networks
 - Understand the perceptron update rule and the principles of the operations of MLPs
-Lectures: recap then
+Lectures: ANN1_Perceptrons.ipynb
 - Perceptrons as a way of learning  rules that aren’t axis-parallel
 - Activity:
 - Second half of perceptrons
@@ -193,11 +193,11 @@ Tutorial activity
 - Description of coursework and discussion about what will be needed but in a way that makes it clear they can’t start yet e.g. framework(.py files) not released **could split into tasks e.g. design, tesat plan, spes**
 Self-study: update your revision bot with this week's core concepts
 
-### Week 8: Artificial Neural Networks 2: MultiLayer Perceptrons
+### Week 8: Artificial Neural Networks 2: MultiLayer Perceptrons 
 Learning Outcomes
 - Principles of biological and artificial neural networks
 - Understand the perceptron update rule and the principles of the operations of MLPs
-Lectures:
+Lectures:ANN2_MLP.ipynb
 - 20 minutes: Multi Layer Perceptrons – architecture and principle of stochastic gradient descent examples: iris, MNIST
 - Activity:
 - 10 minutes: classification vs regression example applications: MNIST, lkeert scale??, 

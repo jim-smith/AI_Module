@@ -13,3 +13,6 @@ created using the workflow
    
 
 when in a talk pressing 't' starts. the speaker notes
+
+Misc: possibilitie for readimng lists:
+https://jakevdp.github.io/PythonDataScienceHandbook/index.html
