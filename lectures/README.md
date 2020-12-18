@@ -1,5 +1,49 @@
 # README
 
+
+Week 1
+- module-intro.ipynb
+- types_of_problems.ipynb
+- Symbolic-vs-Computational_AI.ipynb
+
+Week 2
+- Knowledge_Representation_Rules_and_Facts.ipynb
+- Knowledge_Representation_Meta Knowledge.ipynb
+- AIML_an_example_KRL.ipynb
+
+Week 3
+- Knowledge_Representation_Syntax_and_Semantics.ipynb
+- Knowledge_Representation_Variables_and_Quantifiers.ipynb
+- AIML_variables_and_branching.ipynb
+- AIML_context.ipynb
+
+Week 4
+- Modern-expert-Systems.ipynb
+
+Week 5
+-  Machine_Learning_Introduction_and_Types.ipynb
+
+Week 6
+- Supervised_Machine_Learning.ipynb
+
+Week 7
+-  ANN1_Perceptrons.ipynb
+
+Week 8
+- ANN2_MLP.ipynb
+
+Week 9 
+
+Week 10
+
+Week 11
+
+
+
+
+
+
+
 ## Introduction
 ### Week 1:
 Week 1: Intro to module and types of problems
