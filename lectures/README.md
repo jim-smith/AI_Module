@@ -33,11 +33,13 @@ Week 8
 - ANN2_MLP.ipynb
 
 Week 9 
+- Problem_Solving_As_Search.ipynb
 
 Week 10
+- Search_Algorithms_for_Decision_Problems.ipynb
 
 Week 11
-
+- Informed_Search_Algorithms.ipynb
 
 
 
