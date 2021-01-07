@@ -51,6 +51,15 @@ body.rise-enabled div.inner_cell>div.text_cell_render.rendered_html {
 }
 
 
+.rendered_html code {
+    font-size: smaller
+     padding: 0px; 
+     padding-left: 0px;
+     margin: 0px;
+     margin-left: 0px;
+     margin-top: 0px;/*originally 0*/
+}
+
 .rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
     font-size: 100%;
 }
