@@ -5,4 +5,3 @@ sklearn
 IPython
 ipykernel
 ipywidgets
-pandas

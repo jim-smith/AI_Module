@@ -186,7 +186,7 @@ Tutorial recap  questions using mentimeter:
     
 Tutorial activity
 - Notebook using plotly libraries to create some visualisations for versions of the iris data then apply k-means from scikit-learn, and use this to illustrate considerations for distance-based models like the need for normalisation, effect of noisy/irrelevant features
- - Use the tutorial plan from 19/20 week 6 but might need a lot of help to make these interactive.  **Avoid seaborn?** just use pandas scatter_matrix() plots?
+ - Use the tutorial plan from 19/20 week 6 but might need a lot of help to make these interactive.  **Avoid seaborn?** just use my def for  scatter_matrix() plots?
  - load iris data , set labels - blank for all of them
  - pplot scatter matrix: I'll have ot provide pyplot code to do that
  - run KMeans in 4D then repeat scatter_matrix with colouring   look into cluster matrix space
