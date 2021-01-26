@@ -7,10 +7,12 @@ coursework/.ipynb_checkpoints
 coursework/*cats*.aiml
 lectures/figures/KR1/.ipynb_checkpoints
 .DS_Store
-.pyc
+*.pyc
 AIenv/bin
 AIenv/lib
 AIenv/include
 AIenv/etc
 AIenv/share
 AIenv/pyenv.cfg
+
+.idea
