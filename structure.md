@@ -30,9 +30,9 @@ Lecture:
 - AIML_an_example_KRL.ipynb
 
 Tutorials:
-- So I thought that perhaps  the new week 2 tutorial could be about ‘why we need AI”  and “what implications do different types of AI have” with  learning outcomes of :
-- understanding the difference between  problems and problem instances (randomised TSP generator, random Mastermind puzzles)
-- understanding the differences between problems t hat scale badly, and the scaleability of different algorithms (greedy constructive search for tSP is sub-polynomial), exhaustive search aint.
+- workboook2-authoring-your-first-chatbot.ipynb
+
+
 
 ### Week 3
 Lecture:
@@ -41,31 +41,32 @@ Lecture:
 - AIML_variables_and_branching.ipynb
 - AIML_context.ipynb
 
-Tutorials: Implementing concepts from week2's lecture in AIML
-- workboook2-authoring-your-first-chatbot.ipynb
+Tutorials: 
+- workbook3-using-variables-and-context-in-a-chatbot.ipynb
 
 ### Week 4
 Lecture:
 - Modern-expert-Systems.ipynb
 
 Tutorials:
-- workbook3-using-variables-and-context-in-a-chatbot.ipynb
+- workbook4-conectingAIML-to-other-sertvices.ipynb
+**this has to be run locally   we can't run a separate browser on the csctcloud server**
+- Discussion about working on coursework, planning etc.
 
 ### Week 5
 Lecture:
 -  Machine_Learning_Introduction_and_Types.ipynb
 
 Tutorials:
-- workbook4-conectingAIML-to-other-sertvices.ipynb
-**this has to be run locally   we can't run a separate browser on the csctcloud server**
-- Discussion about working on coursework, planning etc.
+-workbook5_unsupervised_machine_learning.ipynb
 
 ### Week 6
 Lecture:
 - Supervised_Machine_Learning.ipynb
 
 Tutorials:
--workbook5_unsupervised_machine_learning.ipynb
+-workbook6-supervised-machine-learning.ipynb
+- **Introduction to coursework second deliverable**
 
 
 ### Week 7
@@ -73,8 +74,7 @@ Lecture:
 -  ANN1_Perceptrons.ipynb
 
 Tutorials:
--workbook6-supervised-machine-learning.ipynb
-### Introduction to coursework second deliverable
+- workbook7-perceptrons.ipynb
 
 
 **Easter Break**
@@ -84,7 +84,7 @@ Lecture:
 - ANN2_MLP.ipynb
 
 Tutorials:
-- workbook7-perecptrons.ipynb
+- workbook8-multilayer-perceptrons
 
 
 ### Week 9 
@@ -92,7 +92,8 @@ Lecture:
 - Problem_Solving_As_Search.ipynb
 - Search_Algorithms_for_Decision_Problems.ipynb
 Tutorials:
-- workbook8-multilayer-perceptrons
+to be written
+based on cracking combination locks/mastermind exhaustively then with dephha nda brreadth first search
 
 
 ### Week 10
@@ -100,8 +101,8 @@ Lecture:
 - Informed_Search_Algorithms.ipynb
 
 Tutorials:
-- coursework2: greedy constructive rule induction
-
+to be writen
+based on path-finding
 
 ### Week 11
 Lecture:
