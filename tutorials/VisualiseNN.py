@@ -2,12 +2,12 @@
 # On top of that, I added support for showing weights (linewidth, colors, etc.)
 # Contributor: Jianzheng Liu
 # Contact: jzliu.100@gmail.com
-#Jim Smith gratefully used: (i) hard-coded colours to red/blue to reduce number of imported modules,(2) changed line-width multipliers to 5 and 10 from 10 and 100 in extreme cases
+#Jim Smith gratefully used: (i) hard-coded colours to red/blue to reduce number of imported modules,(2) changed line-width multipliers to 5 and 10 from 10 and 100 in extreme cases (iii) commented out automatic saving of plots as png
 
 from matplotlib import pyplot
 from math import cos, sin, atan
 
-from time import localtime, strftime
+#from time import localtime, strftime
 import numpy as np
 
 class Neuron():
@@ -60,8 +60,8 @@ class Layer():
         y_adjustment = self.neuron_radius * cos(angle)
 
         # assign colors to lines depending on the sign of the weight
-        color='red'
-        if weight > 0: color='blue'
+        color='blue'
+        if weight > 0: color='red'
 
         # assign different linewidths to lines depending on the size of the weight
         abs_weight = abs(weight)        
@@ -169,8 +169,8 @@ class NeuralNetwork():
         pyplot.axis('scaled')
         pyplot.axis('off')
         pyplot.title( 'Neural Network architecture', fontsize=15 )
-        figureName='ANN_'+strftime("%Y%m%d_%H%M%S", localtime())+'.png'
-        pyplot.savefig(figureName, dpi=300, bbox_inches="tight")
+        #figureName='ANN_'+strftime("%Y%m%d_%H%M%S", localtime())+'.png'
+        #pyplot.savefig(figureName, dpi=300, bbox_inches="tight")
         pyplot.show()
 
 class DrawNN():
