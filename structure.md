@@ -49,7 +49,7 @@ Lecture:
 - Modern-expert-Systems.ipynb
 
 Tutorials:
-- workbook4-conectingAIML-to-other-sertvices.ipynb
+- workbook4-conectingAIML-to-other-services.ipynb
 **this has to be run locally   we can't run a separate browser on the csctcloud server**
 - Discussion about working on coursework, planning etc.
 
@@ -93,7 +93,7 @@ Lecture:
 - Search_Algorithms_for_Decision_Problems.ipynb
 Tutorials:
 to be written
-based on cracking combination locks/mastermind exhaustively then with dephha nda brreadth first search
+based on cracking combination locks/mastermind exhaustively then with depth and breadth first search
 
 
 ### Week 10
