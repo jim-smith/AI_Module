@@ -16,11 +16,12 @@ Friday|14:00|16:00|UFCFGS-15-1 CP choice 2_ol/01|Artificial Intelligence 1|Compu
 ## Schedule
 ### Week 1
 Lecture:
+- module-intro.ipynb
 - types_of_problems.ipynb
 - Symbolic-vs-Computational_AI.ipynb
 
 Tutorials:
-- module-intro.ipynb
+
 - workbook1_a_trivial_chatbot.ipynb
 
 ### Week 2
