@@ -2,16 +2,17 @@
 
 
 ## Timetable
-|Day |Start|End|Activity|Module|Type|Room|Staff|Title
-|----|-----|---|--------|------|----|----|-----|-----
-Monday| 8:30|10:30|UFCFGS-15-1 CP choice 1_oc/01|Artificial Intelligence 1|Computer Practical (On Campus)|3Q44 FR (H)|Smith, Jim| 
-Monday|12:00|14:00|UFCFGS-15-1 CP choice 1_oc/04|Artificial Intelligence 1|Computer Practical (On Campus)|3Q44 FR (H)|Smith, Jim| 
-Tuesday|9:30|11:30|UFCFGS-15-1 CP choice 1_oc/03|Artificial Intelligence 1|Computer Practical (On Campus)|3Q44 FR (H)|Smith, Jim| 
-Tuesday|12:00|14:00|UFCFGS-15-1 CP choice 1_oc/02|Artificial Intelligence 1|Computer Practical (On Campus)|3Q80 FR (H)|Smith, Jim| 
-Tuesday|16:30|17:30|UFCFGS-15-1 Le/01|Artificial Intelligence 1|Lectorial (Online - Live)| |Smith, Jim| 
-Thursday|8:30|10:30|UFCFGS-15-1 CP choice 1_oc/05|Artificial Intelligence 1|Computer Practical (On Campus)|3Q44 FR (H)|Simons, Chris| 
-Thursday|12:00|14:00|UFCFGS-15-1 CP choice 1_oc/06|Artificial Intelligence 1|Computer Practical (On Campus)|3Q44 FR (H)|Duran, Nathan| 
-Friday|14:00|16:00|UFCFGS-15-1 CP choice 2_ol/01|Artificial Intelligence 1|Computer Practical (Online - Live)| |Duran, Nathan| 
+
+|Day   |Start| End |Activity         |Type|Room|Staff|
+|------|-----|-----|-----------------|----|----|-----|
+Mon   |16:30|17:30|Lecture          |Lectorial (Online - Live)         |online     |Smith, Jim| 
+Tues  |9:30 |11:30|CP choice 1_oc/03|Computer Practical (On Campus)    |3Q44 FR (H)|Smith, Jim| 
+Tues  |12:00|14:00|CP choice 1_oc/02|Computer Practical (On Campus)    |3Q44 FR (H)|Smith, Jim| 
+Weds  | 9:30|11:30|CP choice 1_oc/01|Computer Practical (On Campus)    |3Q44 FR (H)|Smith, Jim| 
+Weds  |12:00|14:00|CP choice 1_oc/04|Computer Practical (On Campus)    |3Q44 FR (H)|Smith, Jim| 
+Thurs |8:30|10:30 |CP choice 1_oc/05|Computer Practical (On Campus)    |3Q44 FR (H)|Simons, Chris| 
+Thurs| 12:00|14:00|CP choice 1_oc/06|Computer Practical (On Campus)    |3Q44 FR (H)|Duran, Nathan| 
+Friday|14:00|16:00|CP choice 2_ol/01|Computer Practical (Online - Live)|online     |Duran, Nathan| 
 
 ## Schedule
 ### Week 1
