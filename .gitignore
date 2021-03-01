@@ -1,11 +1,15 @@
 misc
 .ipynb_checkpoints
 lectures/.ipynb_checkpoints
+lectures/*.aiml  
+lectures/data/*  
+lectures/figures/KR1/.ipynb_checkpoints
 playground/.ipynb_checkpoints
 tutorials/.ipynb_checkpoints
+tutorials/*.aiml  
+tutorials/data/*
 coursework/.ipynb_checkpoints
 coursework/*cats*.aiml
-lectures/figures/KR1/.ipynb_checkpoints
 .DS_Store
 *.pyc
 AIenv/bin
@@ -14,6 +18,7 @@ AIenv/include
 AIenv/etc
 AIenv/share
 AIenv/pyenv.cfg
-
+aimldist
 .idea
 *.code-workspace
+.vscode
