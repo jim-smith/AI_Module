@@ -16,5 +16,4 @@ AIenv/share
 AIenv/pyenv.cfg
 
 .idea
-.vscode
 *.code-workspace
