@@ -58,6 +58,7 @@ body.rise-enabled div.inner_cell>div.text_cell_render.rendered_html {
      margin: 0px;
      margin-left: 0px;
      margin-top: 0px;/*originally 0*/
+     max-height:600px;
 }
 
 .rendered_html table, .rendered_html th, .rendered_html tr, .rendered_html td {
@@ -78,7 +79,12 @@ body.rise-enabled div.inner_cell>div.text_cell_render.rendered_html {
 }
 
 
-
+.reveal pre code {/* Jim overriding wierd top and bottom marghins for block quoted code*/
+  display: block;
+  padding: 5px;
+  overflow: auto;
+  max-height: 800px;
+  word-wrap: normal; }
 
 .container {
   width: 100%;
