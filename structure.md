@@ -93,18 +93,18 @@ Tutorials:
 Lecture:
 - Problem_Solving_As_Search.ipynb
 - Search_Algorithms_for_Decision_Problems.ipynb
-Tutorials:
-to be written
-based on cracking combination locks/mastermind exhaustively then with depth and breadth first search
 
+Tutorials: to be written!  Schedule says: 
+- Common framework for single member search
+- Uninformed search: Depth-and breadth-first search for exploring a maze
 
 ### Week 10
 Lecture:
 - Informed_Search_Algorithms.ipynb
 
-Tutorials:
-to be writen
-based on path-finding
+Tutorials:to be written!.  Schedule says:
+- Implementing a path-finding algorithm to control a non-player character in a game
+
 
 ### Week 11
 Lecture:

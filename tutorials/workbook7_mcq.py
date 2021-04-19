@@ -4,6 +4,43 @@ from IPython.display import display
 from IPython.display import clear_output
 from IPython.display import HTML
 
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+def showPerceptron( w1,w2,bias,func): 
+    in1 = np.linspace(-5,5,100)
+    if (abs(w2) < 0.001):
+        y=np.zeros(100)
+    else:
+        y = -(bias/w2)  - in1*(w1/w2)
+    plt.plot(in1, y, '-r',label="Decision Boundary")
+        # plot sample functions
+    if(func != ''):
+        plt.plot(0,0,'or')
+        if(func=='AND'):
+            m01 = m10 = 'or'
+        else:
+            m01=m10='og'
+        if(func=='XOR'):
+            m11 = 'or'
+        else:
+            m11 = 'og'
+        plt.plot(0,1,m01)
+        plt.plot(1,0,m10)
+        plt.plot(1,1,m11)
+    
+    plt.title('Graph of Perceptron decision Boundary')
+    plt.xlabel('input1', color='#1C2833')
+    plt.ylabel('input2', color='#1C2833')
+
+    plt.xlim(-1.0,2.0)
+    plt.ylim(-1.0,2.0)
+    plt.legend(loc='upper left')
+    plt.grid()
+
+
+
 
 def create_multipleChoice_widgetNEW(description, options, correct_answer):
     if correct_answer not in options:
@@ -100,13 +137,13 @@ Q3 = create_multipleChoice_widget(    'If Input1 is 0, and Input2 is 1, and the 
 
 
 Q4 = create_multipleChoice_widget('If Input1 is 1,  and the perceptron outputs 1 when it should output 0, what is the change to weight1?',
-                                  ['it is increased', 'it is decreased', ''], 'it is decreased')
+                                  ['it is increased', 'it is decreased'], 'it is decreased')
 
 
 Q5 = create_multipleChoice_widget('If Input1 is 1,  and the perceptron outputs 0 when it should output 1, what is the change to weight1?',
-                                  ['it is increased', 'it is decreased', ''], 'it is increased')
+                                  ['it is increased', 'it is decreased'], 'it is increased')
 
-Q6 = create_multipleChoice_widget(    'Is there a single set of weights that would output the right predictions for the OR problem?',
+Q6 = create_multipleChoice_widget(    'Is there only one set of weights that would output the right predictions for the OR problem?',
     ['yes', 'no'], 'no')
 
 Q7 = create_multipleChoice_widget('if a perceptron has learned to correctly predict responses for the OR problem, which one weight can we adjust to make it correctly predict the AND problem?',['biasweight', 'weight1', 'weight2'], 'biasweight')
