@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import copy
 import numpy as np
 from time import sleep
-from IPython.display import clear_output
+from IPython.display import clear_output,display
 
 
 
@@ -64,7 +64,26 @@ class Maze: # this assumes maze is rectangular
         self.contents[x][y] = colour
 
 
+#======================================================
+def setUpMaze(mazefilename):
+    maze = Maze()
+    maze.loadFromTxt("maze.txt")
+    maze.setStart(0,9)
+    maze.setGoal(20,11)
 
+    maze.showMaze()
+
+
+    #define the amount to add to the previous cellid for each move
+    # can only do this once the maze has been read in so we know how big it is!
+    leftMove = -1
+    rightMove = 1
+    upMove = - (maze.lastColumnId)
+    downMove = (maze.lastColumnId)
+    # define the set of move so we can iterate through them
+    moveSet = [leftMove,rightMove, upMove,downMove]
+
+    return maze,moveSet
 
 
 #======================================================
@@ -128,7 +147,7 @@ def evaluate(solution:CandidateSolution,maze:Maze):
     
     
 #======================================================           
-def displaySearchState(theMaze:Maze, current:CandidateSolution, openList,algname,steps):
+def displaySearchState(theMaze:Maze, current:CandidateSolution, openList,algname,steps, refresh_rate= 0.0075):
     # make a copy of the maze so we can colour in the paths
     newmaze = copy.deepcopy(theMaze)
  
@@ -157,20 +176,19 @@ def displaySearchState(theMaze:Maze, current:CandidateSolution, openList,algname
         newmaze.colourCellFromId(lastpos,blue)
 
     #leavethe old picture on screen for long enpugh to see then refresh
-    sleep(0.0075)
+    sleep(refresh_rate)
     clear_output(wait=True)
     plt.figure(figsize = (7.5,7.5))
-    title = "progress for " + algname + " after " + str(steps) + " steps."
+    title = "progress for " + algname + " after testing" + str(steps) + " solutions."
     title = title + "\n Current working candidate in orange.\n"
-    title = title + "Blue cells indicate solitions on openList"
+    title = title + "Blue cells indicate solutions on openList"
     plt.title(title)
-    plt.imshow(newmaze.contents,cmap="Set1")
     plt.axis('off')
-    plt.show()    
+    plt.imshow(newmaze.contents,cmap="Set1")
+    plt.show()  
+    #display(fig)
     
     
-
-
 #================================================================
 import ipywidgets as widgets
 import sys
@@ -214,10 +232,10 @@ def create_multipleChoice_widget(description, options, correct_answer):
     
     return widgets.VBox([description_out, alternativ, check, feedback_out])
 
-Q0 = create_multipleChoice_widget('What type of search is the algorithm below implementing?',['Constructive','Perturbative'],'Constructive')
-Q1 = create_multipleChoice_widget('From your understanding of Depth-First Search, why did the algorithm fdail to complete?',['It completed','It got stuck in a loop','It was not allowed enough iterations'],'It got stuck in a loop')
-Q2 = create_multipleChoice_widget('Is depth-first search complete',['yes','no'],'no')
-Q3 = create_multipleChoice_widget('What is the minimum depth needed to solve the fox-chicken-grain problem?',['4','5','6','7','8'],'7')
-Q4 = create_multipleChoice_widget('Will imposing a maximum depth on the solution  make Depth-First Search complete successfully for every problem',['yes','no'],'no')
-Q5 = create_multipleChoice_widget('Does the depth of the solution found by breadth-first match that needed to solve using the amended versin of depth-first?',['yes','no'],'yes')
+Q1 = create_multipleChoice_widget('What type of search is implemented?',['Constructive','Perturbative'],'Constructive')
+Q2 = create_multipleChoice_widget('Which algorithm found a path to the goal state after examining the fewest solutions?',['Depth-First','Breadth-First','Best-First','Astar'],'Depth-First')
+Q3 = create_multipleChoice_widget('How did the quality of solutions found by depth and breadth first compare?',['depth-first was better','breadth-first was better','they were the same'],'breadth-first was better')
+Q4 = create_multipleChoice_widget('Of the algorithms that found the optimal solution, which examined fewest solutions?',['Depth-First','Breadth-First','Best-First','Astar'],'Astar')
+Q5 = create_multipleChoice_widget('Does depth-first successfully solve all instances of this problem?',['yes','no'],'no')
+Q6 = create_multipleChoice_widget('Does the rank-order of efficiency the complete algorithms depend on the problem instance?',['yes','no'],'yes')
          
