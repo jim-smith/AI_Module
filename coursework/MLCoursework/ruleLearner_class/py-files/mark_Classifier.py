@@ -106,7 +106,10 @@ def getCorrectPredictionsForStudentRuleSet(ruleSet,numRules,correctModel, test_X
 ##
 def MarkClassifier(): 
 
+    num_incs = 100 # number of threasholds tested
+    
     datasets = [ld.load_dataset1(), ld.load_dataset2(), ld.load_dataset3()]
+
 
     setDesc = ("a simple 2-class problem with one predictive variable, all others are zero",
            "a three class problem defined by values for 2 variables, rest are noise",
@@ -122,12 +125,12 @@ def MarkClassifier():
         train_X,train_y,test_X,test_y = datasets[setNum]
  
         #results for correct, knn and s tudent classifiers
-        correctModel = Correct(maxRules=5,increments=100)   
+        correctModel = Correct(maxRules=5,increments=num_incs)   
         currectNumRules, correctTestScore,_ = TestAlgorithmOnDataset (correctModel,train_X,train_y,test_X,test_y,verbose=False)
-        knnModel = KNN(maxRules=5,increments=50) 
+        knnModel = KNN(maxRules=5,increments=num_incs) 
         _, KNNTestScore,_  = TestAlgorithmOnDataset (knnModel,train_X,train_y,test_X,test_y,verbose=False)
     
-        studentModel = Student(maxRules=5,increments=100) 
+        studentModel = Student(maxRules=5,increments=num_incs) 
         studentNumRules, studentTestScore, studentInvalids = TestAlgorithmOnDataset (studentModel,train_X,train_y,test_X,test_y,verbose=False)
     
         correctDeltas[setNum] = np.abs(correctTestScore - studentTestScore)
@@ -209,7 +212,7 @@ def MarkClassifier():
         
         elif(meanDiff < 1.0):
 
-            theMsg = "The mean difference to the target test accuracyy is {:.2f}, is less than 1 percent, so you score 100 for this run.\n"
+            theMsg = "The mean difference to the target test accuracy is {:.2f}, is less than 1 percent, so you score 100 for this run.\n"
             message += theMsg.format(meanDiff)
             finalScore = 100
         

@@ -1,0 +1,198 @@
+<SETTINGS>
+<NUM_INPUTS>1
+<NUM_FLAGS>1
+<USES_MATHML>1
+<USES_SVG>0
+</SETTINGS>
+
+#===============
+
+<DESCRIPTOR>
+<BRIEF> 
+Marking Python Code: Implementing a Greedy Rule Induction Algorithm.
+</BRIEF>
+
+<DETAILED HTML> 
+Marking Python Code: Implementing a Greedy Rule Induction Algorithm
+<p></p>
+This is amended from Rhys' original matrix_class code by Jim Smith (29 March 2021).
+<p></p>
+On submission of the class, it is tested against three datasets as detailed in the specifications on Blackboard.
+
+</DETAILED>
+</DESCRIPTOR>
+
+#===============
+
+<PARAMETERS>
+<GLOBAL>$p1 $StandardCode $QuestionCode </GLOBAL>
+
+$StandardCode = '/home/rgwynlly/ccode/standards';	# Typically do not change this from question to question
+
+require "$StandardCode/pre-submission-nov2020.pl";	# Standard require file for 'file inputs'
+
+# $p1 is a security identifier to access the code in the FEEDBACK section
+
+$p1 = FileInputs_SecurityTag();
+
+
+$QuestionCode = '/home/j4-smith/python_2021/v4/classifier_class';	# Code specific to the question
+
+
+</PARAMETERS>
+
+#===============
+
+<QUESTION>
+# FOLLOWING IS QUESTION-SPECIFIC
+
+my $assessmentSpec = <QQ>
+<p></p>
+<b>Submit Python Code</b>
+<p></p>
+Please submit your Python '.py' file below following the specifications.
+<p></p>
+If you see an error in your submission (e.g. you have submitted the wrong file) then you need to contact Rhys before
+the submission deadline date/time to do a re-submission
+</QQ>
+
+my $assessmentName = '<b>Coursework 2</b>: Implementing Greedy Rule Induction';
+
+#=========================================================================
+
+# FOLLOWING IS NOT QUESTION SPECIFIC EXCEPT POSSIBLY THE 5Kb limit.
+
+
+require "$StandardCode/pre-submission-nov2020.pl";	# Standard require file for 'file inputs'
+
+<PRINT>
+<PROMPT ID='1' HIDDEN></PROMPT>
+</PRINT>
+
+setFileConstraints('20','py','system');               # max file size in Kb/acceptable extensions/banned keywords (delimitted by |)
+
+generateQuestionOutput(\$assessmentSpec,$assessmentName);
+
+
+
+
+
+
+</QUESTION>
+
+#===============
+
+<SOLUTION>
+
+#===
+# These are standard files not to be altered
+
+require "$StandardCode/folder-location.pl";
+require "$StandardCode/python/on-submission.pl";
+require "$StandardCode/on-submission-2020.pl";
+require "$QuestionCode/on-submission.pl";
+#===
+
+processFileSubmission($p1,"$QuestionCode/py-files");
+
+# $p1 is a security tag
+
+# the folder above is the location of the files required to build the python run	
+
+#===
+
+$c1 = 0;	# done purely for system admin purposes
+
+</SOLUTION>
+
+#===============
+
+<MARKING>
+require "$StandardCode/mark-submission.pl";
+
+require "$QuestionCode/mark-submission.pl";
+
+markSubmission($p1,\$f1);
+
+
+
+
+</MARKING>
+
+#===============
+
+<SCORES>
+
+<F1 MANUAL>
+
+<MANUAL>
+
+$MAX_MARK1 = 100;
+
+$MARK1 = $f1;
+
+</MANUAL>
+
+</SCORES>
+
+#===============
+
+<REPORT>
+require "$StandardCode/get-feedback-2020.pl";
+
+my $feedbackStr = FileInputs_getFeedback();
+
+<PRINT>
+Following is the feedback to marking your input file:
+<div style='margin:10px;padding:10px;border:2px blue solid;background-color:white'>
+$feedbackStr
+</div>
+</PRINT>
+</REPORT>
+
+#===============
+
+<FEEDBACK>
+
+<FEEDBACK_PART1>
+
+<PRINT>
+<b>Artificial Intelligence 1, Coursework 2</b>
+<p></p>
+Please submit your python (.py) file below following the coursework specifications.
+<p></p>
+You may view your feedback to see the code that Dewis has received. This will be the .py file which will contain
+only the relevant functions in your submission.
+<p></p>
+If you see an error in your submission (e.g. you have submitted the wrong file) then you need to contact Jim before
+the submission deadline date/time to do a re-submission
+<p></p>
+</PRINT>
+
+<FEEDBACK_PART2>
+
+<PRINT>
+This part will be hidden in an assessment
+</PRINT>
+
+<FEEDBACK_PART3>
+require "$StandardCode/get-feedback-2020.pl";
+require "$StandardCode/supply-submitted-2020.pl";
+
+my $feedbackStr = FileInputs_getFeedback();
+
+supplySubmittedCode($p1,'Retrieve the extracted Python .py file','.py');
+
+supplySubmittedCode($p1,'Retrieve the JupyterLab .pynb notebook','.ipynb');
+
+<PRINT>
+Following is the feedback to marking your input file:
+<div style='margin:10px;padding:10px;border:2px blue solid;background-color:white'>
+$feedbackStr
+</div>
+</PRINT>
+
+
+</FEEDBACK>
+
+#===============

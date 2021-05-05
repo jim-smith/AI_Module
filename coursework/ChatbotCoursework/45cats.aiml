@@ -1,0 +1,229 @@
+<aiml>
+
+<category>
+<pattern> WHAT IS LONG TERM KNOWLEDGE</pattern>
+<template> Long-term knowledge is valid every time a programme is run.</template>
+</category>
+
+<category>
+<pattern> WHAT IS SHORT TERM KNOWLEDGE</pattern>
+<template> Short-term knowledge is only valid for a particular instance or run of a programme.</template>
+</category>
+
+<category>
+<pattern> WHAT IS GENERIC KNOWLEDGE</pattern>
+<template> Generic knowledge is relevant to more than one application or domain.</template>
+</category>
+
+<category>
+<pattern> WHAT IS DOMAIN SPECIFIC KNOWLEDGE</pattern>
+<template> Domain-specific knowledge is only applicable to one specific application or domain.</template>
+</category>
+
+<category>
+<pattern> WHAT IS A FACT</pattern>
+<template> A fact is a statement which asserts that a relationship holds for an object-subject pair.</template>
+</category>
+
+<category>
+<pattern> WHAT IS A RULE</pattern>
+<template> A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.</template>
+</category>
+
+<category>
+<pattern> GIVE ME AN EXAMPLE OF LONG TERM GENERIC KNOWLEDGE</pattern>
+<template> The equations of motion used to calculate the flight-path of a bird in the game Angry Birds.</template>
+</category>
+
+<category>
+<pattern> GIVE ME AN EXAMPLE OF LONG TERM DOMAIN SPECIFIC KNOWLEDGE</pattern>
+<template> The weight of the different types of birds in the game Angry Birds.</template>
+</category>
+
+<category>
+<pattern> GIVE ME AN EXAMPLE OF SHORT TERM GENERIC KNOWLEDGE</pattern>
+<template> The date on which a specific episode of Angry Birds is played is generic because it could also be used by another programme.</template>
+</category>
+
+<category>
+<pattern> GIVE ME AN EXAMPLE OF SHORT TERM DOMAIN SPECIFIC KNOWLEDGE</pattern>
+<template> The number of birds that a user has fired in a particular episode of Angry Birds.</template>
+</category>
+
+<category>
+<pattern> GIVE ME AN EXAMPLE OF A RULE</pattern>
+<template> If isUWEStaff(X) then hasUWEPhone (X).</template>
+</category>
+
+<category>
+<pattern> GIVE ME AN EXAMPLE OF A FACT</pattern>
+<template> Jim Smith from UWE hasUWEPhoneNumber 0117 3287417.</template>
+</category>
+
+<category>
+<pattern> DESCRIBE LONG TERM KNOWLEDGE</pattern>
+<template> Long-term knowledge is valid every time a programme is run.</template>
+</category>
+
+<category>
+<pattern> DESCRIBE SHORT TERM KNOWLEDGE</pattern>
+<template> Short-term knowledge is only valid for a particular instance or run of a programme.</template>
+</category>
+
+<category>
+<pattern> DESCRIBE GENERIC KNOWLEDGE</pattern>
+<template> Generic knowledge is relevant to more than one application or domain.</template>
+</category>
+
+<category>
+<pattern> DESCRIBE DOMAIN SPECIFIC KNOWLEDGE</pattern>
+<template> Domain-specific knowledge is only applicable to one specific application or domain.</template>
+</category>
+
+<category>
+<pattern> DESCRIBE A FACT</pattern>
+<template> A fact is a statement which asserts that a relationship holds for an object-subject pair.</template>
+</category>
+
+<category>
+<pattern> DESCRIBE A RULE</pattern>
+<template> A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.</template>
+</category>
+
+<category>
+<pattern> TELL ME ABOUT LONG TERM KNOWLEDGE</pattern>
+<template> Long-term knowledge is valid every time a programme is run.</template>
+</category>
+
+<category>
+<pattern> TELL ME ABOUT SHORT TERM KNOWLEDGE</pattern>
+<template> Short-term knowledge is only valid for a particular instance or run of a programme.</template>
+</category>
+
+<category>
+<pattern> TELL ME ABOUT GENERIC KNOWLEDGE</pattern>
+<template> Generic knowledge is relevant to more than one application or domain.</template>
+</category>
+
+<category>
+<pattern> TELL ME ABOUT DOMAIN SPECIFIC KNOWLEDGE</pattern>
+<template> Domain-specific knowledge is only applicable to one specific application or domain.</template>
+</category>
+
+<category>
+<pattern> TELL ME ABOUT A FACT</pattern>
+<template> A fact is a statement which asserts that a relationship holds for an object-subject pair.</template>
+</category>
+
+<category>
+<pattern> TELL ME ABOUT A RULE</pattern>
+<template> A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.</template>
+</category>
+
+<category>
+<pattern> ILLUSTRATE THE CONCEPT OF LONG TERM GENERIC KNOWLEDGE</pattern>
+<template> The equations of motion used to calculate the flight-path of a bird in the game Angry Birds.</template>
+</category>
+
+<category>
+<pattern> ILLUSTRATE THE CONCEPT OF LONG TERM DOMAIN SPECIFIC KNOWLEDGE</pattern>
+<template> The weight of the different types of birds in the game Angry Birds.</template>
+</category>
+
+<category>
+<pattern> ILLUSTRATE THE CONCEPT OF SHORT TERM GENERIC KNOWLEDGE</pattern>
+<template> The date on which a specific episode of Angry Birds is played is generic because it could also be used by another programme.</template>
+</category>
+
+<category>
+<pattern> ILLUSTRATE THE CONCEPT OF SHORT TERM DOMAIN SPECIFIC KNOWLEDGE</pattern>
+<template> The number of birds that a user has fired in a particular episode of Angry Birds.</template>
+</category>
+
+<category>
+<pattern> ILLUSTRATE THE CONCEPT OF A FACT</pattern>
+<template> Jim Smith from UWE hasUWEPhoneNumber 0117 3287417.</template>
+</category>
+
+<category>
+<pattern> ILLUSTRATE THE CONCEPT OF A RULE</pattern>
+<template> If isUWEStaff(X) then hasUWEPhone (X).</template>
+</category>
+
+<category>
+<pattern> PROVIDE AN EXAMPLE OF LONG TERM GENERIC KNOWLEDGE</pattern>
+<template> The equations of motion used to calculate the flight-path of a bird in the game Angry Birds.</template>
+</category>
+
+<category>
+<pattern> PROVIDE AN EXAMPLE OF LONG TERM DOMAIN SPECIFIC KNOWLEDGE</pattern>
+<template> The weight of the different types of birds in the game Angry Birds.</template>
+</category>
+
+<category>
+<pattern> PROVIDE AN EXAMPLE OF SHORT TERM GENERIC KNOWLEDGE</pattern>
+<template> The date on which a specific episode of Angry Birds is played is generic because it could also be used by another programme.</template>
+</category>
+
+<category>
+<pattern> PROVIDE AN EXAMPLE OF SHORT TERM DOMAIN SPECIFIC KNOWLEDGE</pattern>
+<template> The number of birds that a user has fired in a particular episode of Angry Birds.</template>
+</category>
+
+<category>
+<pattern> PLEASE PROVIDE AN EXAMPLE OF A FACT</pattern>
+<template> Jim Smith from UWE hasUWEPhoneNumber 0117 3287417.</template>
+</category>
+
+<category>
+<pattern> WHY IS KNOWING THAT USEFUL</pattern>
+<template> I have no answer for that.</template>
+</category>
+
+<category>
+<pattern> PLEASE PROVIDE AN EXAMPLE OF A RULE</pattern>
+<template> If isUWEStaff(X) then hasUWEPhone (X).</template>
+</category>
+
+<category>
+<pattern> WHAT IS A RULE MYBOT</pattern>
+<template> A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.</template>
+</category>
+
+<category>
+<pattern> PLEASE GIVE ME AN EXAMPLE OF A RULE</pattern>
+<template> If isUWEStaff(X) then hasUWEPhone (X).</template>
+</category>
+
+<category>
+<pattern> PLEASE MYBOT WHAT IS A RULE</pattern>
+<template> A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.</template>
+</category>
+
+<category>
+<pattern> MYBOT PLEASE WHAT IS A RULE</pattern>
+<template> A rule is a statement that generates new knowledge by asserting that if one fact is true, then another is also true.</template>
+</category>
+
+<category>
+<pattern> DESCRIBE HOW AIML ALLOWS VARIABLES IN ITS LONG TERM KNOWLEDGE</pattern>
+<template> AIML has wildcards and srai for that purpose.</template>
+</category>
+
+<category>
+<pattern> WHY IS KNOWING THAT USEFUL</pattern>
+<template> Because it allows us to make statements that apply to classes of things or questions.</template>
+</category>
+
+<category>
+<pattern> HOW DOES AIML PROVIDE CONTEXT DURING A CONVERSATION</pattern>
+<template> AIML supports context through the use of the that tag to refer to previous bot answers, and via setting variables such as topic.</template>
+</category>
+
+<category>
+<pattern> WHY IS KNOWING THAT USEFUL</pattern>
+<template> The fourth word in this question is an example of how some words can only be understood in context. </template>
+</category>
+
+</aiml>
+

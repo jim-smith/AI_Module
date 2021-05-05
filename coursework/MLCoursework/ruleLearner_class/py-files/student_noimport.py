@@ -66,7 +66,7 @@ class GreedyRuleInductionModel(LearnedRuleModel):
                             #  SET score = SCORE(newModel)
                             newScore = self.Score(newModel, self.numRules+1,train_X,train_y)
                             #  IF (newModel.score > bestChild.score)
-                            if (newScore>bestChildScore):
+                            if (newScore>=bestChildScore):
                                 #SET bestChild= COPY(newModel)
                                 bestChild = newModel.copy()
                                 bestChildScore = newScore

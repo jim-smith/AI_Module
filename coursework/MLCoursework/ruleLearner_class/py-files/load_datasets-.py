@@ -23,14 +23,14 @@ def load_dataset1():
     labels1[3] = 0
     data1[4][keyFeature]= 0.0
     labels1[4] = 1
-
+    
     for i in range(4,numTr):
         data1[i][keyFeature] = 4.75*random()
         labels1[i] = 1
         if (bool(getrandbits(1)) ):
             data1[i][keyFeature] +=5.25
             labels1[i]=0
-
+  
 
     train1_X= data1[0:100,:]
     train1_y= labels1[0:100]
@@ -75,11 +75,11 @@ def load_dataset2():
     # now random points in this box for the other 138 instances
     for i in range ( 6,3*(numSamplesPerClass ),3):
         # region labelled 0 covers x 6-8, y1-5 
-        data2[i][1], data2[i][2], data2[i][numFeatures] = 6 +random()*2,1 + random()*4,0
+        data2[i][1], data2[i][2], data2[i][numFeatures] = 6.1 +random()*1.8,1.1 + random()*3.8,0
         # region labelled 1 covers x 1-5, y0-2
-        data2[i+1][1], data2[i+1][2], data2[i+1][numFeatures] = 1 +random()*4, random()*2, 1
+        data2[i+1][1], data2[i+1][2], data2[i+1][numFeatures] = 1.1 +random()*3.8, random()*1.9, 1
         # region labelled 2 covers x 1-5, y3-5
-        data2[i+2][1], data2[i+2][2], data2[i+2][numFeatures] = 1 +random()*4, 3 + random()*2, 2
+        data2[i+2][1], data2[i+2][2], data2[i+2][numFeatures] = 1.1 +random()*3.8, 3.1 + random()*1.8, 2
  
 
     #splt data into train & test, shuffle rows
