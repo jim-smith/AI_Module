@@ -1,3 +1,4 @@
+mindmap
 misc
 .ipynb_checkpoints
 lectures/.ipynb_checkpoints
@@ -7,7 +8,8 @@ playground/.ipynb_checkpoints
 tutorials/.ipynb_checkpoints
 tutorials/*.aiml  
 coursework/.ipynb_checkpoints
-coursework/*cats*.aiml
+coursework/ChatbotCoursework/*cats*.aiml
+coursework/MLCoursework/ruleLearner_class/py-files/correct*
 .DS_Store
 *.pyc
 AIenv/bin
